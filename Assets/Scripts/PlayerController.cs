@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed; // determines how fast the player can move
-    public bool isMoving; // checks player if moving
-    public Vector2 input; // Vector2 class (specific to unity) holds x and y coords
+    private bool isMoving; // checks player if moving
+    private Vector2 input; // Vector2 class (specific to unity) holds x and y coords
     private Animator animator;
+    public LayerMask solidObjectsLayer;
+
 
     // Loads the character and animates it
     private void Awake()
@@ -40,7 +42,8 @@ public class PlayerController : MonoBehaviour
                 targetPosition.x += input.x; // input.x is 1 or -1
                 targetPosition.y += input.y; // input.y is 1 or -1
 
-                StartCoroutine(Move(targetPosition));
+                // Checks if the tile is walkable first.
+                if (IsWalkable(targetPosition)) StartCoroutine(Move(targetPosition)); // Move position to target position
             }
         }
         animator.SetBool("isMoving", isMoving);
@@ -69,5 +72,18 @@ public class PlayerController : MonoBehaviour
         }
         transform.position = targetPosition;
         isMoving = false;
+    }
+
+    // Checks if a tile in the overworld is a walkable tile.
+    private bool IsWalkable(Vector3 targetPosition)
+    {
+        if (Physics2D.OverlapCircle(targetPosition, 0.1f, solidObjectsLayer) != null)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 }
