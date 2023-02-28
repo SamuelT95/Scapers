@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 input; // Vector2 class (specific to unity) holds x and y coords
     private Animator animator;
     public LayerMask solidObjectsLayer;
-
+    public LayerMask interactableLayer;
 
     // Loads the character and animates it
     private void Awake()
@@ -44,9 +44,30 @@ public class PlayerController : MonoBehaviour
                 if (IsWalkable(targetPosition)) StartCoroutine(Move(targetPosition)); // Move position to target position
             }
         }
+
         animator.SetBool("isMoving", isMoving);
+
+        // Interaction command is spacebar
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            Interact();
+        }
     }
 
+    // Checks if the position in front of the player has an interactable object.
+    void Interact()
+    {
+        var facingDirection = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
+        var interactPosition = transform.position + facingDirection; // This is the target interaction area in front of player.
+        // Debug.DrawLine(transform.position, interactPosition, Color.red, 1f);
+
+        var collider = Physics2D.OverlapCircle(interactPosition, 0.2f, interactableLayer); // Checks if the target area has an interactable object.
+        if (collider != null)
+        {
+            Debug.Log("there is an NPC here!");
+        }
+
+    }
 
     // This function will move current position to new desired position using movement speed.
     // It will slide the player's character to the new position, instead of teleporting.
@@ -75,7 +96,7 @@ public class PlayerController : MonoBehaviour
     // Checks if a tile in the overworld is a walkable tile.
     private bool IsWalkable(Vector3 targetPosition)
     {
-        if (Physics2D.OverlapCircle(targetPosition, 0.1f, solidObjectsLayer) != null)
+        if (Physics2D.OverlapCircle(targetPosition, 0.001f, solidObjectsLayer | interactableLayer) != null)
         {
             return false;
         }
