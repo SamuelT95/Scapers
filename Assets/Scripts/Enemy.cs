@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 
     private void Update() // 60 times per second this function will run
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Butt");
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
 
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
     }
