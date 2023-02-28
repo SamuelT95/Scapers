@@ -24,9 +24,7 @@ public class PlayerController : MonoBehaviour
         {
             // Stores movement keys if they are pressed
             input.x = Input.GetAxisRaw("Horizontal"); // checks left and right arrow keys
-            input.y = Input.GetAxisRaw("Vertical"); // checks down and up arrow keys
-
-
+            input.y = Input.GetAxisRaw("Vertical"); // checks down and up arrow 
 
             if (input.x != 0) input.y = 0; // Disables diagonal movement
 
