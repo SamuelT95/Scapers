@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private void Update() // 60 times per second this function will run
+    public void HandleUpdate() // 60 times per second this function will run
     {
         if (!isMoving) // If character is not moving, then keep checking for input
         {
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
         var collider = Physics2D.OverlapCircle(interactPosition, 0.2f, interactableLayer); // Checks if the target area has an interactable object.
         if (collider != null)
         {
-            Debug.Log("there is an NPC here!");
+            collider.GetComponent<Interactable>()?.Interact(); // If the target is interactable, then run func Interact();
         }
 
     }
