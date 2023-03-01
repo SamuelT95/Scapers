@@ -3,7 +3,7 @@ using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class EnemyController : MonoBehaviour
+public class GhostController : MonoBehaviour
 {
     public float moveSpeed; // determines how fast the player can move
     private float currentSpeed = 0;
@@ -13,7 +13,6 @@ public class EnemyController : MonoBehaviour
     private void Update() // 60 times per second this function will run
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-
         var distance = Vector3.Distance(player.transform.position, transform.position);
 
         if (distance < engagementDistance)
