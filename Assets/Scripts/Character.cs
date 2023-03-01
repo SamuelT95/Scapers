@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,15 +7,11 @@ public class Character : MonoBehaviour
 {
     public int health;
     public int maxHealth;
-    internal List<Attack> _attacks;
-
-
-    public List<Attack> Attacks { get { return _attacks; }}
-
+    public Attack[] attacks = new Attack[4];
 
     public bool Takedamage(Attack attack)
     {
-        float rFloat = Random.Range(0f, 1f);
+        float rFloat = UnityEngine.Random.Range(0f, 1f);
 
         if (rFloat < attack.FailureRate)
         {
