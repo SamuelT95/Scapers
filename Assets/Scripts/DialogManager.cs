@@ -48,7 +48,8 @@ public class DialogManager : MonoBehaviour
             } 
             else
             { // Once there is no more dialog boxes, hide the dialog box from the screen
-                dialogBox.SetActive(false); 
+                dialogBox.SetActive(false);
+                currentLine = 0;
                 OnHideDialog?.Invoke(); // enables FreeRoam by changing gamestate
             }
         }
