@@ -6,31 +6,30 @@ public class Character : MonoBehaviour
 {
     public int health;
     public int maxHealth;
-    //internal List<Attack> _attacks;
+    internal List<Attack> _attacks;
 
 
-    //public List<Attack> Attacks { get { return _attacks; } }
+    public List<Attack> Attacks { get { return _attacks; }}
 
 
-    //public bool Takedamage(Attack attack)
-    //{
-    //    Random random = new Random();
-    //    double rFloat = random.NextDouble();
+    public bool Takedamage(Attack attack)
+    {
+        float rFloat = Random.Range(0f, 1f);
 
-    //    if (rFloat < attack.FailureRate )
-    //    {
-    //        return true;
-    //    }
+        if (rFloat < attack.FailureRate)
+        {
+            return true;
+        }
 
-    //    _health -= attack.Damage;
+        health -= attack.Damage;
 
-    //    if(health <= 0)
-    //    {
-    //        return false;
-    //    }
+        if (health <= 0)
+        {
+            return false;
+        }
 
-    //    return true;
-    //}
+        return true;
+    }
 
     public void Heal(int amount)
     {
