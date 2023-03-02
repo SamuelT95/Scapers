@@ -24,16 +24,22 @@ public class GhostController : MonoBehaviour
 
         if (distance < engagementDistance)
         {
-            if(currentSpeed < moveSpeed)
+            PlayerController pc = player.GetComponent<PlayerController>();
+            float xDir = pc.animator.GetFloat("moveX");
+            float yDir = pc.animator.GetFloat("moveY");
+
+            //if the player is looking at ghost, do nothing
+            if((xDir > 0 && player.transform.position.x - transform.position.x < 0) || (yDir > 0 && player.transform.position.y - transform.position.y < 0))
+            {
+                return;
+            }
+
+            if (currentSpeed < moveSpeed)
             {
                 currentSpeed += acceleration * Time.deltaTime;
             }
 
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, currentSpeed * Time.deltaTime);
-        }
-        else
-        {
-            currentSpeed = 0;
         }
         
     }
