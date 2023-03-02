@@ -34,11 +34,8 @@ public class Character : MonoBehaviour
         defense = baseDefense;
 
         //calculates what our stats should be at current level
-        for(int i = 0; i < level; i++)
-        {
-            maxHealth = maxHealth + maxHealth * healthModifier;
-            defense = defense + defense * defenseModifier;
-        }
+        maxHealth = baseMaxHealth * Mathf.Pow(1 + healthModifier, level);
+        defense = baseDefense * Mathf.Pow(1 + defenseModifier, level);
 
         health = maxHealth;
     }
@@ -49,6 +46,8 @@ public class Character : MonoBehaviour
         {
             damage = damage + damage * damageModifier;
         }
+
+        damage = damage * Mathf.Pow(1 + damageModifier, level);
 
         return damage;
     }
