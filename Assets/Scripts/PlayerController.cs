@@ -98,11 +98,11 @@ public class PlayerController : MonoBehaviour
     {
         if (Physics2D.OverlapCircle(targetPosition, 0.001f, solidObjectsLayer | interactableLayer) != null)
         {
-            return false;
+            return false; // Blocks the player from walking into this tile.
         }
         else
         {
-            return true;
+            return true; // Allows the player to walk on this tile.
         }
     }
 }
