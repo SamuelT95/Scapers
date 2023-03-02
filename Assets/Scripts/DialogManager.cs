@@ -17,7 +17,7 @@ public class DialogManager : MonoBehaviour
     public event Action OnHideDialog;
 
     // Shows the DialogManager to a global scope
-    public static DialogManager Instance { get; private set; } 
+    public static DialogManager Instance { get; private set; }
     private void Awake()
     {
         Instance = this;
@@ -39,34 +39,61 @@ public class DialogManager : MonoBehaviour
 
     public void HandleUpdate()
     {
-        if (Input.GetKeyUp(KeyCode.Space) && !isTyping) // Start dialog, and disables button mashing to cause disorder.
+        if (Input.GetKeyUp(KeyCode.Space))
         {
-            ++currentLine; // Starting line 0, adding one
-            if (currentLine < dialog.Lines.Count) // Checks if current line is less than the amount of dialog lines the npc has
+            if (isTyping)
             {
-                StartCoroutine(TypeDialog(dialog.Lines[currentLine])); // Shows dialog 
-            } 
-            else
-            { // Once there is no more dialog boxes, hide the dialog box from the screen
-                dialogBox.SetActive(false);
-                currentLine = 0;
-                OnHideDialog?.Invoke(); // enables FreeRoam by changing gamestate
+                StopAllCoroutines(); // Stop the current typing process
+                isTyping = false;
+                dialogText.text = dialog.Lines[currentLine]; // Show entire dialog text
             }
+
+            else  // Start dialog
+            {
+                ++currentLine; // Starting line 0, adding one
+                if (currentLine < dialog.Lines.Count) // Checks if current line is less than the amount of dialog lines the npc has
+                {
+                    StartCoroutine(TypeDialog(dialog.Lines[currentLine])); // Shows dialog 
+                }
+                else
+                { // Once there is no more dialog boxes, hide the dialog box from the screen
+                    dialogBox.SetActive(false);
+                    currentLine = 0;
+                    OnHideDialog?.Invoke(); // enables FreeRoam by changing gamestate
+                }
+            }
+
         }
+
     }
 
     // Shows dialog text letter by letter rather than all at once.
+    // Shows all the text at once if the user presses spacebar during the iteration.
     public IEnumerator TypeDialog(string line)
     {
         isTyping = true;
         dialogText.text = ""; // Empty the dialog sentence
-        foreach (var letter in line.ToCharArray()) // Adds 1 letter at a time
+        bool skipDialog = false;
+        for (int i = 0; i < line.Length; i++)
         {
-            dialogText.text += letter;
-            yield return new WaitForSeconds(1f/lettersPerSecond);
+            if (skipDialog)
+            {
+                dialogText.text += line.Substring(i);
+                break;
+            }
+
+            dialogText.text += line[i];
+
+            if (Input.GetKeyDown(KeyCode.Space)) // Waits if the user presses spacebar during the iteration.
+            {
+                skipDialog = true;
+            }
+
+            yield return new WaitForSeconds(1f / lettersPerSecond);
         }
+
         isTyping = false;
     }
 
-    
+
 }
