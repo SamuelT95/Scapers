@@ -20,7 +20,7 @@ public class DialogManager : MonoBehaviour
     public static DialogManager Instance { get; private set; }
     private void Awake()
     {
-        Instance = this;
+        Instance ??= this; // ??= operator sets Instance to 'this' only if it is currently null, so it's set only once.
     }
 
     Dialog dialog;
@@ -33,7 +33,7 @@ public class DialogManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
         OnShowDialog?.Invoke();
         this.dialog = dialog;
-        dialogBox.SetActive(true); // Changes the visibility of the dialog box
+        dialogBox.SetActive(true); // Changes the visibility of the dialog 
         StartCoroutine(TypeDialog(dialog.Lines[0]));
     }
 
@@ -71,6 +71,12 @@ public class DialogManager : MonoBehaviour
     // Shows all the text at once if the user presses spacebar during the iteration.
     public IEnumerator TypeDialog(string line)
     {
+
+        if (string.IsNullOrEmpty(line))
+        {
+            yield break; // Exit the coroutine if line is null or empty.
+        }
+
         isTyping = true;
         dialogText.text = ""; // Empty the dialog sentence
         bool skipDialog = false;
