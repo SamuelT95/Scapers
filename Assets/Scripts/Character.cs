@@ -28,6 +28,12 @@ public class Character : MonoBehaviour
         return true;
     }
 
+    public Attack GetRandomAttack()
+    {
+        int selection = UnityEngine.Random.Range(1, 5);
+        return attacks[selection];
+    }
+
     public void Heal(int amount)
     {
         while(health < maxHealth && amount != 0) 
