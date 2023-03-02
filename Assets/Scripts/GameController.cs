@@ -37,6 +37,11 @@ public class GameController : MonoBehaviour
 
     private void Start() // A way to switch game states
     {
+
+/*        // Load the initial scene
+        SceneManager.LoadScene("FreeRoamWorld");*/
+
+
         DialogManager.Instance.OnShowDialog += () => // Lambda expression
         {
             state = GameState.Dialog;
@@ -62,13 +67,20 @@ public class GameController : MonoBehaviour
         switch (state)
         {
             case GameState.FreeRoam:
-                playerController.HandleUpdate();
+                if (state == GameState.FreeRoam && playerController != null)
+                {
+/*                Debug.Log("GameState is currently on FreeRoam mode");
+*/
+                    playerController.HandleUpdate();
+                }
                 break;
             case GameState.Dialog:
                 DialogManager.Instance.HandleUpdate();
+/*                Debug.Log("GameState is currently on dialog mode");
+*/
                 break;
             case GameState.Battle:
-                SceneManager.LoadScene("anotherscene");
+                Debug.Log("GameState is currently on battle mode");
                 break;
             default:
                 Debug.LogError("Invalid game state");
@@ -77,19 +89,20 @@ public class GameController : MonoBehaviour
 
         if (state == GameState.Battle)
         {
-            UnloadSceneAfterDelay("anotherscene", 1f);
+            EndBattle();
         }
     }
 
     public void EndBattle()
     {
-        StartCoroutine(UnloadSceneAfterDelay("anotherscene", 1f));
-        ChangeGameState(GameState.FreeRoam);    
+        StartCoroutine(UnloadSceneAfterDelay("FreeRoamWorld", 1f)); // 1 second delay
+        Debug.Log("Ending battle");
+        ChangeGameState(GameState.FreeRoam);
     }
 
     IEnumerator UnloadSceneAfterDelay(string sceneName, float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.UnloadSceneAsync(sceneName);
+        SceneManager.LoadScene("FreeRoamWorld");
     }
 }

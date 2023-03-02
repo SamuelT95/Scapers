@@ -36,9 +36,10 @@ public class BattleTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("You collided with this object");
-            Destroy(gameObject);
+            /*Destroy(gameObject);*/
+            UnityEngine.SceneManagement.SceneManager.LoadScene("BattleScene");
+            Debug.Log("Changing GameState to battle");
             GameController.Instance.ChangeGameState(GameState.Battle);
-            UnityEngine.SceneManagement.SceneManager.LoadScene("anotherscene");
 
         }
     }
