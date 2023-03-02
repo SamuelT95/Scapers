@@ -37,15 +37,20 @@ public class GameController : MonoBehaviour
     GameState state;
     private void Update()
     {
-        if (state == GameState.FreeRoam)
+        switch (state)
         {
-            playerController.HandleUpdate();
-        } else if (state == GameState.Dialog)
-        {
-            DialogManager.Instance.HandleUpdate();
-        } else if (state == GameState.Battle)
-        {
-
+            case GameState.FreeRoam:
+                playerController.HandleUpdate();
+                break;
+            case GameState.Dialog:
+                DialogManager.Instance.HandleUpdate();
+                break;
+            case GameState.Battle:
+                // TODO: Handle the battle state here.
+                break;
+            default:
+                Debug.LogError("Invalid game state");
+                break;
         }
     }
 }
