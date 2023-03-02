@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Butt
   - Ghost
+  - PlayerHealth
+  - EnemyHealth
+  - EnemyLevel
+  - PlayerLocation
+  - PlayerLevel
+  - EnemyLocation
+  - BackGround
   layers:
   - Default
   - TransparentFX
