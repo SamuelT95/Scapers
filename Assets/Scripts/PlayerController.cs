@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -20,6 +21,13 @@ public class PlayerController : MonoBehaviour
 
     public void HandleUpdate() // 60 times per second this function will run
     {
+        //prevents movement when in battle state
+        GameController gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        if(gameController.state == GameState.Battle)
+        {
+            return;
+        }
+
         if (!isMoving) // If character is not moving, then keep checking for input
         {
             // Stores movement keys if they are pressed

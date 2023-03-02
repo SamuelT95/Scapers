@@ -40,16 +40,17 @@ public class Character : MonoBehaviour
         health = maxHealth;
     }
 
-    internal float getModifiedDamage(float damage, int level)
+    internal float getModifiedDamage(float damage)
     {
-        for (int i = 0; i < level; i++)
-        {
-            damage = damage + damage * damageModifier;
-        }
-
         damage = damage * Mathf.Pow(1 + damageModifier, level);
 
         return damage;
+    }
+
+    internal float getModifiedHealth(float amount)
+    {
+        amount = amount * Mathf.Pow(1 + healthModifier, level);
+        return amount;
     }
 
     public float getHealth()
@@ -62,22 +63,9 @@ public class Character : MonoBehaviour
         return maxHealth;
     }
 
-    public bool Takedamage(Attack attack, int enemyLevel)
+    public bool Takedamage(float damage)
     {
-        float rFloat = UnityEngine.Random.Range(0f, 1f);
-
-        if (rFloat < attack.FailureRate)
-        {
-            return true;
-        }
-
-        health -= getModifiedDamage(attack.Damage, enemyLevel);
-
-        if (health <= 0)
-        {
-            return false;
-        }
-
+        health -= damage - defense;
         return true;
     }
 
@@ -87,13 +75,16 @@ public class Character : MonoBehaviour
         return attacks[selection];
     }
 
-    public void Heal(int amount)
+    public bool Heal(float amount)
     {
-        while(health < maxHealth && amount != 0) 
+        health += amount;
+
+        if (health > maxHealth)
         {
-            health++;
-            amount--;
+            health = maxHealth;
         }
+
+        return true;
     }
         
 }
