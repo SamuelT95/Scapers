@@ -5,11 +5,65 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public int health;
-    public int maxHealth;
+    // public attributes of characters, meant to be modified in unity
+    public int level;
+    public float baseMaxHealth;
+    public float baseDefense;
+
     public Attack[] attacks = new Attack[4];
 
-    public bool Takedamage(Attack attack)
+    // these will affect how much our power increases with levels
+    private float healthModifier = 0.1f;
+    private float damageModifier = 0.1f;
+    private float defenseModifier = 0.1f;
+
+    private float defense;
+    private float health;
+    private float maxHealth;
+
+    
+    //set the attributes of character based on their level
+    void Start()
+    {
+        levelUp();
+    }
+
+    internal void levelUp()
+    {
+        maxHealth = baseMaxHealth;
+        defense = baseDefense;
+
+        //calculates what our stats should be at current level
+        for(int i = 0; i < level; i++)
+        {
+            maxHealth = maxHealth + maxHealth * healthModifier;
+            defense = defense + defense * defenseModifier;
+        }
+
+        health = maxHealth;
+    }
+
+    internal float getModifiedDamage(float damage, int level)
+    {
+        for (int i = 0; i < level; i++)
+        {
+            damage = damage + damage * damageModifier;
+        }
+
+        return damage;
+    }
+
+    public float getHealth()
+    {
+        return health;
+    }
+
+    public float getMaxHealth()
+    {
+        return maxHealth;
+    }
+
+    public bool Takedamage(Attack attack, int enemyLevel)
     {
         float rFloat = UnityEngine.Random.Range(0f, 1f);
 
@@ -18,7 +72,7 @@ public class Character : MonoBehaviour
             return true;
         }
 
-        health -= attack.Damage;
+        health -= getModifiedDamage(attack.Damage, enemyLevel);
 
         if (health <= 0)
         {

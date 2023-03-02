@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class Attack : ScriptableObject
 {
     public string Name;
-    public int Damage;
+    public float Damage;
     public float FailureRate;
+
+    //animation
+    // etc.
 }
