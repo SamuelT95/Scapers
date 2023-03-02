@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-abstract public class Attack
+[CreateAssetMenu]
+public class Attack : ScriptableObject
 {
-    internal string _name;
-    internal int _damage;
-    internal float _failureRate;
-
-    public string Name { get { return _name; } }
-    public int Damage { get { return _damage; } }
-    public float FailureRate { get { return _failureRate; } }
+    public string Name;
+    public int Damage;
+    public float FailureRate;
 }
