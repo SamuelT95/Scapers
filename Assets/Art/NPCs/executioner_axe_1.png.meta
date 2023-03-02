@@ -108,12 +108,12 @@ TextureImporter:
       name: executioner_axe_1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 112
-        width: 32
-        height: 32
+        x: 22
+        y: 108
+        width: 27
+        height: 29
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 6, y: -12}
@@ -133,12 +133,12 @@ TextureImporter:
       name: executioner_axe_1_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 112
-        width: 32
-        height: 32
+        x: 22
+        y: 72
+        width: 27
+        height: 28
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,12 +154,12 @@ TextureImporter:
       name: executioner_axe_1_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 80
-        width: 32
-        height: 32
+        x: 22
+        y: 36
+        width: 27
+        height: 29
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,12 +175,12 @@ TextureImporter:
       name: executioner_axe_1_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 80
-        width: 32
-        height: 32
+        x: 22
+        y: 0
+        width: 27
+        height: 30
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,90 +188,6 @@ TextureImporter:
       bones: []
       spriteID: 84447d2967d23114fa903f8429700e80
       internalID: 1994261447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: executioner_axe_1_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 48
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f30a3e3a566bb745b80d3f58a8f86bf
-      internalID: 936056736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: executioner_axe_1_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 48
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad1036cf2866d6543be6cbafe317f266
-      internalID: -698125511
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: executioner_axe_1_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb5b841903c432741a2e0d199cdc7c30
-      internalID: -917412096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: executioner_axe_1_7
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26d7082d3d04e9d4495a8d423caaf5c2
-      internalID: 582625614
       vertices: []
       indices: 
       edges: []
@@ -291,10 +207,6 @@ TextureImporter:
       executioner_axe_1_1: 1242713560
       executioner_axe_1_2: -364521239
       executioner_axe_1_3: 1994261447
-      executioner_axe_1_4: 936056736
-      executioner_axe_1_5: -698125511
-      executioner_axe_1_6: -917412096
-      executioner_axe_1_7: 582625614
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

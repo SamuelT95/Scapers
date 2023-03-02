@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         //prevents movement when in battle state
         GameController gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-        if(gameController.state == GameState.Battle)
+        if (gameController.state == GameState.Battle)
         {
             return;
         }
