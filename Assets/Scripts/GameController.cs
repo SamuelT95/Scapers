@@ -51,7 +51,7 @@ public class GameController : MonoBehaviour
         
     }
 
-    GameState state;
+    public GameState state;
 
     public void ChangeGameState(GameState state)
     {

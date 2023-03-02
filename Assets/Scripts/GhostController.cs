@@ -12,6 +12,13 @@ public class GhostController : MonoBehaviour
 
     private void Update() // 60 times per second this function will run
     {
+        //prevents movement when in battle state
+        GameController gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        if (gameController.state == GameState.Battle)
+        {
+            return;
+        }
+
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         var distance = Vector3.Distance(player.transform.position, transform.position);
 
