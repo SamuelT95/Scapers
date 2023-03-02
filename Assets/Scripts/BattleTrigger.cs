@@ -27,17 +27,19 @@ using UnityEngine;
 /// 
 /// Exit to Overworld.
 /// </summary>
-public class BattleController : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+/// 
 
-    // Update is called once per frame
-    void Update()
+public class BattleTrigger : MonoBehaviour
+{
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("You collided with this object");
+            Destroy(gameObject);
+            GameController.Instance.ChangeGameState(GameState.Battle);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("anotherscene");
+
+        }
     }
 }

@@ -17,8 +17,23 @@ public enum GameState
     // GameController controls the state of the game, such as menu browsing, combat, dialogue.
 public class GameController : MonoBehaviour
 {
+    public static GameController Instance { get; private set; } // Static instance property, singleton
+
     // SerializeField exposes the PlayerController field in the Unity inspector.
     [SerializeField] PlayerController playerController;
+
+    private void Awake() // Singleton pattern
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start() // A way to switch game states
     {
@@ -33,9 +48,15 @@ public class GameController : MonoBehaviour
                 state = GameState.FreeRoam;
             }
         };
+        
     }
 
     GameState state;
+
+    public void ChangeGameState(GameState state)
+    {
+        this.state = state;
+    }
     private void Update()
     {
         switch (state)
@@ -47,7 +68,7 @@ public class GameController : MonoBehaviour
                 DialogManager.Instance.HandleUpdate();
                 break;
             case GameState.Battle:
-                SceneManager.LoadScene("BattleSceneName");
+                SceneManager.LoadScene("anotherscene");
                 break;
             default:
                 Debug.LogError("Invalid game state");
@@ -56,13 +77,19 @@ public class GameController : MonoBehaviour
 
         if (state == GameState.Battle)
         {
-            // Handle battle logic here
+            UnloadSceneAfterDelay("anotherscene", 1f);
         }
     }
 
     public void EndBattle()
     {
-        state = GameState.FreeRoam;
-        SceneManager.UnloadSceneAsync("BattleSceneName");
+        StartCoroutine(UnloadSceneAfterDelay("anotherscene", 1f));
+        ChangeGameState(GameState.FreeRoam);    
+    }
+
+    IEnumerator UnloadSceneAfterDelay(string sceneName, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.UnloadSceneAsync(sceneName);
     }
 }
