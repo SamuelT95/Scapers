@@ -189,7 +189,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &260135254
 GameObject:
@@ -18324,7 +18324,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6387843623689192688, guid: 393e5760392592c42b59d9cf81c716b6, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6387843623689192688, guid: 393e5760392592c42b59d9cf81c716b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -36256,3 +36256,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 0
+  attacks:
+  - {fileID: 11400000, guid: 506bb8dfb3751874a87b9eca7c8c75e6, type: 2}
+  - {fileID: 11400000, guid: 0191142ddc7e6a04cbeb7306a46df914, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
