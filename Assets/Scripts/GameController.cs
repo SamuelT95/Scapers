@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 /// <summary>
@@ -46,11 +47,22 @@ public class GameController : MonoBehaviour
                 DialogManager.Instance.HandleUpdate();
                 break;
             case GameState.Battle:
-                // TODO: Handle the battle state here.
+                SceneManager.LoadScene("BattleSceneName");
                 break;
             default:
                 Debug.LogError("Invalid game state");
                 break;
         }
+
+        if (state == GameState.Battle)
+        {
+            // Handle battle logic here
+        }
+    }
+
+    public void EndBattle()
+    {
+        state = GameState.FreeRoam;
+        SceneManager.UnloadSceneAsync("BattleSceneName");
     }
 }
