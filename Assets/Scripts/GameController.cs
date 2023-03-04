@@ -87,22 +87,60 @@ public class GameController : MonoBehaviour
                 break;
         }
 
-        if (state == GameState.Battle)
-        {
-            EndBattle();
-        }
     }
+
+    public IEnumerator StartBattle(GameObject enemy)
+    {
+        state = GameState.Battle;
+        Scene level = SceneManager.GetActiveScene();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+
+        SceneManager.LoadScene("BattleScene", LoadSceneMode.Additive);
+
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
+
+        Scene battle = SceneManager.GetSceneByName("BattleScene");
+        SceneManager.MoveGameObjectToScene(enemy, battle);
+        SceneManager.MoveGameObjectToScene(player, battle);
+        SceneManager.SetActiveScene(battle);
+
+        foreach (GameObject obj in level.GetRootGameObjects())
+        {
+            obj.SetActive(false);
+        }
+
+        EndBattle();
+
+    }
+
 
     public void EndBattle()
     {
-        StartCoroutine(UnloadSceneAfterDelay("FreeRoamWorld", 1f)); // 1 second delay
+        StartCoroutine(UnloadSceneAfterDelay("FreeRoamWorld", 10f)); // 1 second delay
         Debug.Log("Ending battle");
-        ChangeGameState(GameState.FreeRoam);
+        
     }
 
     IEnumerator UnloadSceneAfterDelay(string sceneName, float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene("FreeRoamWorld");
+
+        
+        Scene battle = SceneManager.GetSceneByName("BattleScene");
+        Scene level = SceneManager.GetSceneByName("FreeRoamWorld");
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        SceneManager.MoveGameObjectToScene(player, level);
+        SceneManager.SetActiveScene(level);
+        SceneManager.UnloadSceneAsync(battle);
+
+        foreach (GameObject obj in level.GetRootGameObjects())
+        {
+            obj.SetActive(true);
+        }
+
+        ChangeGameState(GameState.FreeRoam);
     }
 }

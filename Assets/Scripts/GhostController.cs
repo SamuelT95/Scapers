@@ -29,7 +29,7 @@ public class GhostController : MonoBehaviour
             float yDir = pc.animator.GetFloat("moveY");
 
             //if the player is looking at ghost, do nothing
-            if((xDir > 0 && player.transform.position.x - transform.position.x < 0) || (yDir > 0 && player.transform.position.y - transform.position.y < 0))
+            if((xDir < 0 && player.transform.position.x - transform.position.x > 0) || (xDir > 0 && player.transform.position.x - transform.position.x < 0) || (yDir > 0 && player.transform.position.y - transform.position.y < 0) || (yDir < 0 && player.transform.position.y - transform.position.y > 0))
             {
                 return;
             }

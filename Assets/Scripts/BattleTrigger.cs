@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Battle triggers:
@@ -33,13 +34,13 @@ public class BattleTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && GameController.Instance.state != GameState.Battle)
         {
             Debug.Log("You collided with this object");
             /*Destroy(gameObject);*/
-            UnityEngine.SceneManagement.SceneManager.LoadScene("BattleScene");
+            
             Debug.Log("Changing GameState to battle");
-            GameController.Instance.ChangeGameState(GameState.Battle);
+            StartCoroutine(GameController.Instance.StartBattle(gameObject));
 
         }
     }
