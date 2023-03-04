@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,6 +18,8 @@ public enum GameState
     // GameController controls the state of the game, such as menu browsing, combat, dialogue.
 public class GameController : MonoBehaviour
 {
+    Vector3 oldpos;
+
     public static GameController Instance { get; private set; } // Static instance property, singleton
 
     // SerializeField exposes the PlayerController field in the Unity inspector.
@@ -100,6 +103,16 @@ public class GameController : MonoBehaviour
 
         yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
+
+        oldpos = player.transform.position;
+        player.transform.position = GameObject.Find("PlayerLocation").transform.position;
+        enemy.transform.position = GameObject.Find("EnemyLocation").transform.position;
+
+        GameObject playerLevel = GameObject.Find("PlayerLevel");
+        playerLevel.transform.GetComponent<TMP_Text>().text = player.GetComponent<Character>().level.ToString();
+
+        GameObject enemyLevel = GameObject.Find("EnemyLevel");
+        enemyLevel.transform.GetComponent<TMP_Text>().text = enemy.GetComponent<Character>().level.ToString();
 
         Scene battle = SceneManager.GetSceneByName("BattleScene");
         SceneManager.MoveGameObjectToScene(enemy, battle);

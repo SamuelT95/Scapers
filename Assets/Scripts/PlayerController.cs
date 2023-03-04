@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
         // If there a value, then this while loop will execute.
         // Mathf.Epsilon is an extremely small number
         // sqrMagnitude square roots the vector.
-        while ((targetPosition - transform.position).sqrMagnitude > Mathf.Epsilon)
+        while ((targetPosition - transform.position).sqrMagnitude > Mathf.Epsilon && GameController.Instance.state != GameState.Battle)
         {
             // Synchronizes the user's frame rate and the game.
             // Time.deltaTime are intervals in seconds from last frame to current frame
