@@ -154,6 +154,8 @@ public class GameController : MonoBehaviour
             obj.SetActive(true);
         }
 
+        player.transform.position = oldpos;
+
         ChangeGameState(GameState.FreeRoam);
     }
 }
