@@ -98,22 +98,29 @@ public class GameController : MonoBehaviour
         Scene level = SceneManager.GetActiveScene();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-
+        //laods the battle scene and waits a frame, scenes dont load until the end of the frame
         SceneManager.LoadScene("BattleScene", LoadSceneMode.Additive);
-
         yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
 
+        //store the players overworld position
         oldpos = player.transform.position;
+
+
+        player.GetComponent<PlayerController>().isMoving = false;
         player.transform.position = GameObject.Find("PlayerLocation").transform.position;
         enemy.transform.position = GameObject.Find("EnemyLocation").transform.position;
 
+        //set the battlescenes level indicators to the player/enemies levels
         GameObject playerLevel = GameObject.Find("PlayerLevel");
         playerLevel.transform.GetComponent<TMP_Text>().text = player.GetComponent<Character>().level.ToString();
+        player.transform.localScale = new Vector3(2,2,2);
 
         GameObject enemyLevel = GameObject.Find("EnemyLevel");
         enemyLevel.transform.GetComponent<TMP_Text>().text = enemy.GetComponent<Character>().level.ToString();
+        enemy.transform.localScale = new Vector3(3,3,3);
 
+        //Move player and enemy to battle scene, then hide overworld
         Scene battle = SceneManager.GetSceneByName("BattleScene");
         SceneManager.MoveGameObjectToScene(enemy, battle);
         SceneManager.MoveGameObjectToScene(player, battle);
@@ -131,7 +138,7 @@ public class GameController : MonoBehaviour
 
     public void EndBattle()
     {
-        StartCoroutine(UnloadSceneAfterDelay("FreeRoamWorld", 10f)); // 1 second delay
+        StartCoroutine(UnloadSceneAfterDelay("FreeRoamWorld", 5f)); // 1 second delay
         Debug.Log("Ending battle");
         
     }
@@ -140,11 +147,15 @@ public class GameController : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        
+        //get scenes
         Scene battle = SceneManager.GetSceneByName("BattleScene");
         Scene level = SceneManager.GetSceneByName("FreeRoamWorld");
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
+        //return player to normal size
+        player.transform.localScale = new Vector3(1, 1, 1);
+
+        //move player back to overworld and unhide overworld
         SceneManager.MoveGameObjectToScene(player, level);
         SceneManager.SetActiveScene(level);
         SceneManager.UnloadSceneAsync(battle);
@@ -154,6 +165,7 @@ public class GameController : MonoBehaviour
             obj.SetActive(true);
         }
 
+        //return player to oveworld position
         player.transform.position = oldpos;
 
         ChangeGameState(GameState.FreeRoam);

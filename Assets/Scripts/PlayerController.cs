@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed; // determines how fast the player can move
-    private bool isMoving; // checks player if moving
+    public bool isMoving; // checks player if moving
     private Vector2 input; // Vector2 class (specific to unity) holds x and y coords
     public Animator animator;
     public LayerMask solidObjectsLayer;

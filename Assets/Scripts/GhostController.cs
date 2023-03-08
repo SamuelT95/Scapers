@@ -1,7 +1,5 @@
 using TMPro;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class GhostController : MonoBehaviour
 {
@@ -22,6 +20,7 @@ public class GhostController : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         var distance = Vector3.Distance(player.transform.position, transform.position);
 
+        //if player is in range
         if (distance < engagementDistance)
         {
             PlayerController pc = player.GetComponent<PlayerController>();
