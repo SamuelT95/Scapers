@@ -56426,6 +56426,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuPanel: {fileID: 426047512}
+  quitButton: {fileID: 1802258002}
+  continueButton: {fileID: 1299995811}
 --- !u!1001 &5112836044140445317
 PrefabInstance:
   m_ObjectHideFlags: 0
