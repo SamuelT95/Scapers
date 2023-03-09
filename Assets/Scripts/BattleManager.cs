@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BattleManager : MonoBehaviour
 {
+    [SerializeField] Canvas canvas;
     private Vector3 overworldPosition;
     // Singleton pattern
     public static BattleManager Instance { get; internal set; }
@@ -23,11 +26,6 @@ public class BattleManager : MonoBehaviour
     }
     // Singleton pattern ends
 
-    private void Start()
-    {
-        
-    }
-
     // Update is called once per frame. This is where you detect keystrokes
     public void HandleUpdate()
     {
@@ -44,6 +42,23 @@ public class BattleManager : MonoBehaviour
         SceneManager.LoadScene("BattleScene", LoadSceneMode.Additive);
         yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
+
+        // loading the screenshot from the enemy trigger
+        string backgroundScreenshot = PlayerPrefs.GetString("screenshot", "");
+        if (backgroundScreenshot != null && backgroundScreenshot != "")
+        {
+            byte[] bytes = Convert.FromBase64String(backgroundScreenshot);
+            Texture2D screenshotTexture = new Texture2D(Screen.width, Screen.height);
+            screenshotTexture.LoadImage(bytes);
+
+            // set the scene background with the acquired screenshot
+            GameObject canvasGameObject = GameObject.Find("Canvas");
+            Canvas canvas = canvasGameObject.GetComponent<Canvas>();
+
+            // create a sprite from the screenshot
+            canvas.GetComponentInChildren<Image>().sprite = Sprite.Create(screenshotTexture, new Rect(0, 0, screenshotTexture.width, screenshotTexture.height), new Vector2(0.5f, 0.5f));
+
+        }
 
         // store the players overworld position
         overworldPosition = player.transform.position;
@@ -70,13 +85,12 @@ public class BattleManager : MonoBehaviour
         SceneManager.MoveGameObjectToScene(player, battle);
         SceneManager.SetActiveScene(battle);
 
+        // turn off the visibility of objects in the overworld
         foreach (GameObject obj in level.GetRootGameObjects())
         {
             obj.SetActive(false);
         }
-
         EndBattle();
-
     }
 
 
@@ -91,15 +105,15 @@ public class BattleManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        //get scenes
+        // get scenes
         Scene battle = SceneManager.GetSceneByName("BattleScene");
-        Scene level = SceneManager.GetSceneByName("FreeRoamWorld");
+        Scene level = SceneManager.GetSceneByName(sceneName);
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-        //return player to normal size
+        // return player to normal size
         player.transform.localScale = new Vector3(1, 1, 1);
 
-        //move player back to overworld and unhide overworld
+        // move player back to overworld and unhide overworld
         SceneManager.MoveGameObjectToScene(player, level);
         SceneManager.SetActiveScene(level);
         SceneManager.UnloadSceneAsync(battle);
@@ -109,7 +123,7 @@ public class BattleManager : MonoBehaviour
             obj.SetActive(true);
         }
 
-        //return player to oveworld position
+        //return player to overworld position
         player.transform.position = overworldPosition;
 
         GameController.Instance.ChangeGameState(GameState.FreeRoam);
