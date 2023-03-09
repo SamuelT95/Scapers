@@ -18,13 +18,12 @@ public enum GameState
     // GameController controls the state of the game, such as menu browsing, combat, dialogue.
 public class GameController : MonoBehaviour
 {
-    Vector3 oldpos;
+    Vector3 overworldPosition;
 
     public static GameController Instance { get; private set; } // Static instance property, singleton
 
     // SerializeField exposes the PlayerController field in the Unity inspector.
     [SerializeField] PlayerController playerController;
-    private BattleManager battleManager;
 
 
     private void Awake() // Singleton pattern
@@ -76,7 +75,7 @@ public class GameController : MonoBehaviour
                 DialogManager.Instance.HandleUpdate();
                 break;
             case GameState.Battle:
-                Debug.Log("Battlemode on");
+                /*Debug.Log("Battlemode on");*/
                 BattleManager.Instance.HandleUpdate();
                 break;
             default:
@@ -86,35 +85,41 @@ public class GameController : MonoBehaviour
 
     }
 
-    public IEnumerator StartBattle(GameObject enemy)
+    public void StartBattle(GameObject enemy)
     {
-        state = GameState.Battle;
-        Scene level = SceneManager.GetActiveScene();
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-        //laods the battle scene and waits a frame, scenes dont load until the end of the frame
+        state = GameState.Battle;
+        StartCoroutine(BattleManager.Instance.StartBattle(enemy));
+
+/*        Scene level = SceneManager.GetActiveScene(); // Gets the current scene (Overworld)
+        GameObject player = GameObject.FindGameObjectWithTag("Player"); // Finds the player object
+
+        // loads the battle scene and waits 2 frames, scenes dont load until the end of the frame
         SceneManager.LoadScene("BattleScene", LoadSceneMode.Additive);
         yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
 
-        //store the players overworld position
-        oldpos = player.transform.position;
 
+        // store the players overworld position
+        overworldPosition = player.transform.position;
 
+        // stops player from moving freely during the battle phase
         player.GetComponent<PlayerController>().isMoving = false;
+
+        // positions the images of each combatant in the battlescene
         player.transform.position = GameObject.Find("PlayerLocation").transform.position;
         enemy.transform.position = GameObject.Find("EnemyLocation").transform.position;
 
-        //set the battlescenes level indicators to the player/enemies levels
+        // set the battlescenes level indicators to the player/enemies levels
         GameObject playerLevel = GameObject.Find("PlayerLevel");
         playerLevel.transform.GetComponent<TMP_Text>().text = player.GetComponent<Character>().level.ToString();
-        player.transform.localScale = new Vector3(2,2,2);
+        player.transform.localScale = new Vector3(2, 2, 2);
 
         GameObject enemyLevel = GameObject.Find("EnemyLevel");
         enemyLevel.transform.GetComponent<TMP_Text>().text = enemy.GetComponent<Character>().level.ToString();
-        enemy.transform.localScale = new Vector3(3,3,3);
+        enemy.transform.localScale = new Vector3(3, 3, 3);
 
-        //Move player and enemy to battle scene, then hide overworld
+        // move player and enemy to battle scene, then hide overworld
         Scene battle = SceneManager.GetSceneByName("BattleScene");
         SceneManager.MoveGameObjectToScene(enemy, battle);
         SceneManager.MoveGameObjectToScene(player, battle);
@@ -125,14 +130,14 @@ public class GameController : MonoBehaviour
             obj.SetActive(false);
         }
 
-        EndBattle();
+        EndBattle();*/
 
     }
 
-
+/*
     public void EndBattle()
     {
-        StartCoroutine(UnloadSceneAfterDelay("FreeRoamWorld", 5f)); // 1 second delay
+        StartCoroutine(UnloadSceneAfterDelay("FreeRoamWorld", 5f)); // 5 second delay
         Debug.Log("Ending battle");
         
     }
@@ -160,8 +165,8 @@ public class GameController : MonoBehaviour
         }
 
         //return player to oveworld position
-        player.transform.position = oldpos;
+        player.transform.position = overworldPosition;
 
         ChangeGameState(GameState.FreeRoam);
-    }
+    }*/
 }

@@ -36,9 +36,9 @@ public class BattleTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player") && GameController.Instance.state != GameState.Battle)
         {
-            Debug.Log("You collided with this object");
-            Debug.Log("Changing GameState to battle");
-            StartCoroutine(GameController.Instance.StartBattle(gameObject));
+            Debug.Log("You collided with " + gameObject);
+            Debug.Log("Calling StartBattle function");
+            GameController.Instance.StartBattle(gameObject);
             /*GameController.Instance.state = GameState.Battle;*/
         }
     }
