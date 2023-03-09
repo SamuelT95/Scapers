@@ -29929,6 +29929,7 @@ GameObject:
   - component: {fileID: 1299995815}
   - component: {fileID: 1299995814}
   - component: {fileID: 1299995813}
+  - component: {fileID: 1299995816}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -29954,7 +29955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.2, y: 0}
+  m_AnchoredPosition: {x: 5, y: -53}
   m_SizeDelta: {x: 174.1794, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1299995813
@@ -30000,7 +30001,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1299995814}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1299995816}
+        m_TargetAssemblyTypeName: ContinueButton, Assembly-CSharp
+        m_MethodName: ContinueGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1299995814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30039,6 +30052,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299995811}
   m_CullTransparentMesh: 1
+--- !u!114 &1299995816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299995811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d166d53f65272249955200e359d0949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuController: {fileID: 1956663662}
 --- !u!1 &1382759289
 GameObject:
   m_ObjectHideFlags: 0
@@ -30187,7 +30213,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Paused
+  m_Text: 'How to play:
+
+    WASD or arrow keys to move
+
+    Space bar to interact
+    with npcs
+
+
+    Paused (Press ESC TO RETURN)
+
+
 
 
 
@@ -43192,7 +43228,7 @@ GameObject:
   - component: {fileID: 1802258007}
   - component: {fileID: 1802258006}
   - component: {fileID: 1802258005}
-  - component: {fileID: 1802258004}
+  - component: {fileID: 1802258008}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -43218,21 +43254,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.1999893, y: -77.49999}
+  m_AnchoredPosition: {x: 4.9999905, y: -130.49998}
   m_SizeDelta: {x: 174.1794, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1802258004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1802258002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e73aa12f5b72b3e44a69bcf5e0b380c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1802258005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43277,7 +43301,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1802258004}
+      - m_Target: {fileID: 1802258008}
         m_TargetAssemblyTypeName: QuitButton, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -43327,6 +43351,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802258002}
   m_CullTransparentMesh: 1
+--- !u!114 &1802258008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802258002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73aa12f5b72b3e44a69bcf5e0b380c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1858228635
 GameObject:
   m_ObjectHideFlags: 0
