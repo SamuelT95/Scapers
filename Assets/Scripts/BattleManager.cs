@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
+    // Singleton pattern
     public static BattleManager Instance { get; internal set; }
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake() 
     {
-
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
+    // Singleton pattern ends
 
     // Update is called once per frame
     public void HandleUpdate()

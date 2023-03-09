@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
 
     // SerializeField exposes the PlayerController field in the Unity inspector.
     [SerializeField] PlayerController playerController;
-    [SerializeField] BattleManager battleManager;
+    private BattleManager battleManager;
 
 
     private void Awake() // Singleton pattern
@@ -76,8 +76,9 @@ public class GameController : MonoBehaviour
                 DialogManager.Instance.HandleUpdate();
                 break;
             case GameState.Battle:
-/*                BattleManager.Instance.HandleUpdate();
-*/                break;
+                Debug.Log("Battlemode on");
+                BattleManager.Instance.HandleUpdate();
+                break;
             default:
                 Debug.LogError("Invalid game state");
                 break;
