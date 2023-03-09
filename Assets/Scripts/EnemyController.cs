@@ -10,7 +10,6 @@ public class EnemyController : MonoBehaviour, Interactable
     {
         Debug.Log("You will start a battle!");
         StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
-
     }
 
 }

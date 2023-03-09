@@ -24,6 +24,8 @@ public class GameController : MonoBehaviour
 
     // SerializeField exposes the PlayerController field in the Unity inspector.
     [SerializeField] PlayerController playerController;
+    [SerializeField] BattleManager battleManager;
+
 
     private void Awake() // Singleton pattern
     {
@@ -40,11 +42,6 @@ public class GameController : MonoBehaviour
 
     private void Start() // A way to switch game states
     {
-
-/*        // Load the initial scene
-        SceneManager.LoadScene("FreeRoamWorld");*/
-
-
         DialogManager.Instance.OnShowDialog += () => // Lambda expression
         {
             state = GameState.Dialog;
@@ -72,19 +69,15 @@ public class GameController : MonoBehaviour
             case GameState.FreeRoam:
                 if (state == GameState.FreeRoam && playerController != null)
                 {
-/*                Debug.Log("GameState is currently on FreeRoam mode");
-*/
                     playerController.HandleUpdate();
                 }
                 break;
             case GameState.Dialog:
                 DialogManager.Instance.HandleUpdate();
-/*                Debug.Log("GameState is currently on dialog mode");
-*/
                 break;
             case GameState.Battle:
-                Debug.Log("GameState is currently on battle mode");
-                break;
+/*                BattleManager.Instance.HandleUpdate();
+*/                break;
             default:
                 Debug.LogError("Invalid game state");
                 break;
