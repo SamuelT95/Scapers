@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// This class allows us to add text to dialogue boxes within the Unity inspector. 
+/// This class allows us to add text to dialog boxes within the Unity inspector. 
 /// </summary>
 public class DialogManager : MonoBehaviour
 {

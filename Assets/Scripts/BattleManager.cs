@@ -30,6 +30,7 @@ public class BattleManager : MonoBehaviour
     public void HandleUpdate()
     {
         /*Debug.Log("GameState is currently on battle mode");*/
+
     }
 
     public IEnumerator StartBattle(GameObject enemy)
@@ -109,19 +110,19 @@ public class BattleManager : MonoBehaviour
 
         // get scenes
         Scene battle = SceneManager.GetSceneByName("BattleScene");
-        Scene level = SceneManager.GetSceneByName(sceneName);
+        Scene overworldLevel = SceneManager.GetSceneByName(sceneName);
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         GameObject eventController = GameObject.Find("EventSystem");
         // return player to normal size
         player.transform.localScale = new Vector3(1, 1, 1);
 
         // move player back to overworld and unhide overworld
-        SceneManager.MoveGameObjectToScene(player, level);
-        SceneManager.MoveGameObjectToScene(eventController, level);
-        SceneManager.SetActiveScene(level);
+        SceneManager.MoveGameObjectToScene(player, overworldLevel);
+        SceneManager.MoveGameObjectToScene(eventController, overworldLevel);
+        SceneManager.SetActiveScene(overworldLevel);
         SceneManager.UnloadSceneAsync(battle);
 
-        foreach (GameObject obj in level.GetRootGameObjects())
+        foreach (GameObject obj in overworldLevel.GetRootGameObjects())
         {
             obj.SetActive(true);
         }
