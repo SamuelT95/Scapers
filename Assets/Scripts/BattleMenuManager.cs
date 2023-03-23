@@ -18,9 +18,22 @@ public class BattleMenuManager : MonoBehaviour
 
     public void Back()
     {
-        BattleMenu.SetActive(true);
-        AttackMenu.SetActive(false);
-        PhysicalAttackMenu.SetActive(false);
+        if (BattleMenu)
+        {
+            BattleMenu.SetActive(true);
+        }
+        if (AttackMenu)
+        {
+            AttackMenu.SetActive(false);
+        }
+        if (PhysicalAttackMenu)
+        {
+            PhysicalAttackMenu.SetActive(false);
+        }
+        if (MagicAttackMenu)
+        {
+            MagicAttackMenu.SetActive(false);
+        }
     }
 
     public void Heal()
@@ -54,6 +67,35 @@ public class BattleMenuManager : MonoBehaviour
     public void Pierce()
     {
         Debug.Log("Piercing damage");
+        Back();
+    }
+
+    public void Magical()
+    {
+        AttackMenu.SetActive(false);
+        MagicAttackMenu.SetActive(true);
+    }
+
+    public void Air()
+    {
+        Debug.Log("Air damage");
+        Back();
+    }
+    public void Electric()
+    {
+        Debug.Log("Electric damage");
+        Back();
+    }
+
+    public void Water()
+    {
+        Debug.Log("Water damage");
+        Back();
+    }
+
+    public void Fire()
+    {
+        Debug.Log("Fire damage");
         Back();
     }
 
