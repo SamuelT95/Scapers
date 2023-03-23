@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BattleMenuManager : MonoBehaviour
 {
+/*    GameObject player = GameObject.FindGameObjectWithTag("Player");
+    GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");*/
 
     public GameObject BattleMenu;
     public GameObject AttackMenu;
@@ -55,6 +57,7 @@ public class BattleMenuManager : MonoBehaviour
     public void Slash()
     {
         Debug.Log("Slashing damage");
+        
         Back();
     }
 
