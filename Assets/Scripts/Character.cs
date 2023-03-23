@@ -10,7 +10,12 @@ public class Character : MonoBehaviour
     public float baseMaxHealth;
     public float baseDefense;
 
-    public Attack[] attacks = new Attack[4];
+    public Physical[] physicalAttacks = new Physical[4];
+    public Magical[] magicalAttacks = new Magical[4];
+    public PhysicalType physicalWeakness;
+    public MagicalType magicalWeakness;
+    public PhysicalType physicalResistance;
+    public MagicalType magicalResistance;
 
     // these will affect how much our power increases with levels
     private float healthModifier = 0.1f;
@@ -71,8 +76,26 @@ public class Character : MonoBehaviour
 
     public Attack GetRandomAttack()
     {
-        int selection = UnityEngine.Random.Range(1, 5);
-        return attacks[selection];
+        int type = UnityEngine.Random.Range(0, 1);
+        int selection = UnityEngine.Random.Range(0, 4);
+
+        Attack attack = null;
+
+        if(type == 0)
+        {
+            attack = physicalAttacks[selection];
+        }
+        else
+        {
+            attack = magicalAttacks[selection];
+        }
+
+        if(attack == null)
+        {
+            attack = GetRandomAttack();
+        }
+
+        return attack;
     }
 
     public bool Heal(float amount)
