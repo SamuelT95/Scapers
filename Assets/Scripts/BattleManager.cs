@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -90,7 +91,11 @@ public class BattleManager : MonoBehaviour
         // turn off the visibility of objects in the overworld
         foreach (GameObject obj in level.GetRootGameObjects())
         {
-            obj.SetActive(false);
+            if (obj.GetType() != typeof(EventSystem))
+            {
+                obj.SetActive(false);
+            }
+            
         }
         EndBattle();
     }
