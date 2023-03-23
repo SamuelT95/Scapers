@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,7 +103,2023 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: motw_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 504
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0979f103c5df7ee47975ed89c0839634
+      internalID: 506325763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 504
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a9b6fb3c17f864aa48ef56bd49e137
+      internalID: -1562737582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 504
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b435a30734247dd48bad81c87a535d09
+      internalID: 312599923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_3
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 504
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c53b51114a55524e86ea507080c60a5
+      internalID: 655567210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_4
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 504
+        width: 38
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459b4736d7ce49d428202d888d2f7707
+      internalID: 327382499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_5
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 504
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691f6f1acb44ca8418b8aad9f047358d
+      internalID: -1230403216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 504
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ddf44576689d34296bf15c5968c54a
+      internalID: -387520060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_7
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 504
+        width: 38
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb194addfb625a4588818be744cf639
+      internalID: 855186444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_8
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 504
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47309f65b47639b45b3e17976c41a311
+      internalID: -1935897064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_9
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 504
+        width: 40
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a150f71a31b96439aafd16cec6737b
+      internalID: -1794573913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_10
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 504
+        width: 42
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63862c659d022049909c789469aee81
+      internalID: 1406019906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_11
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 504
+        width: 40
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c32b57a842ff142aba8ff63b7e8ccf
+      internalID: 1209097579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 432
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95066754be012ec40ba80c605f0dbd70
+      internalID: -345749861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_13
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 432
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14936805892900e48a5606b788a96707
+      internalID: -43856851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_14
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 432
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715492d40ef0f294ab62d73127f6ea7d
+      internalID: 679891843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_15
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 432
+        width: 38
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea424a6380b6a940beb1c4ae8901ecf
+      internalID: 1972465661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_16
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 432
+        width: 36
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe687012a1605f94f99909d436129cfa
+      internalID: -821702831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_17
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 432
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92797493af7fef048b5d62dd737b0895
+      internalID: -729376920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_18
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 432
+        width: 30
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9b6d8e2e9855d45b7857c9aec177be
+      internalID: -57935935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_19
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 432
+        width: 30
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf985053d240ac4e8e1fdaf432c6f2c
+      internalID: 1736215319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_20
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 432
+        width: 30
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c28b66e306791449a0b0d60159f4947
+      internalID: -1643872186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_21
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 432
+        width: 40
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7d864297de04f48a9cfc3ca9844e8c
+      internalID: 857524063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_22
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 432
+        width: 40
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6287ad768b9c3440b4b2e901dc5a9d5
+      internalID: -420747003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_23
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 432
+        width: 40
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65c85a7b9cdfb844bcfcfe8a54610f1
+      internalID: -329999481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_24
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 360
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: febe2fc522194a4499ffd21c588b03de
+      internalID: 755693569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_25
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 360
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ecc44120ddd7a4db02d8dd4ce36d82
+      internalID: -755376684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_26
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 360
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cafc6691d4a185b48a73d4c7d5052bfd
+      internalID: 296852428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_27
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 360
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f90ceff6115044244832bb56caa403e0
+      internalID: -1587192022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_28
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 360
+        width: 36
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd28220058ea4147920d675f0c2ab1e
+      internalID: 1453291497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_29
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 360
+        width: 38
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b12c4a96e09e8b40ab5f1ad324bea24
+      internalID: 1843012229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_30
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 360
+        width: 30
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7426927ba041c1441b89a580176bc9df
+      internalID: -10820211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_31
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 360
+        width: 30
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e180d179ab856e04d86bfea2c9df55e3
+      internalID: -1545104239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_32
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 360
+        width: 30
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd95c5c64cab94439eacd3a598190c5
+      internalID: -784728106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_33
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 360
+        width: 40
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac0c77df12286c84d98465c15de62e80
+      internalID: 1622840967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_34
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 360
+        width: 40
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49b2f602e499d14ea769760105ac303
+      internalID: -1310704733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_35
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 360
+        width: 40
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b275530f9f8685b4a8edc09dfecb0543
+      internalID: -562791381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_36
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 288
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36c3963c314e674ea8f5979fb551b93
+      internalID: -1524774329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_37
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 288
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804f9831be31e96499ccb07da8977f5d
+      internalID: -774548180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_38
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 288
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f632e571813e643a14efa0097d7d7f
+      internalID: -1567721043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_39
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 288
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44bd12a351ea9c643a52d9cf779ecea2
+      internalID: 999523585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_40
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 288
+        width: 38
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 345540f88fd54f4449eb8578e8c82c49
+      internalID: 2123266261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_41
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 288
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a042e4d211ea094fb78c7798601b182
+      internalID: 1135949182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_42
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 288
+        width: 34
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308342a1fb302d74ca3c42cd75189b40
+      internalID: -1944787501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_43
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 288
+        width: 38
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc28cb9be10a1b4fb051d9cdbb9adf1
+      internalID: 775160901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_44
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 288
+        width: 34
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a4c013959afb9428b236cb5c8c1d4d
+      internalID: -800493257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_45
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 288
+        width: 40
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71cc1db529ee0541a044ff3e6a1338f
+      internalID: 1180668317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_46
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 288
+        width: 42
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6dd78079da252478323a8af5f717e7
+      internalID: -1971700028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_47
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 288
+        width: 42
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77042af5a9a2a3f44962be4b2ef4878d
+      internalID: -1275658665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_48
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 216
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5b5d6040aec994696d53b770b0d849
+      internalID: -476869465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_49
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 216
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c869a642eb1e34891b88bbfbd4dab8
+      internalID: 2046324980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_50
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 216
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ed66a2f2839574e8ab3c0b8da8c18c
+      internalID: -721785049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_51
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 216
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61dab1d671f23d64c9ef53fb15549d22
+      internalID: 493932676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_52
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 216
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3670c453ea2144d8c9f19914f7bf09
+      internalID: 1730454458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_53
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 216
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 891737ed5ca13464c9ea79066e7e4114
+      internalID: 270560231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_54
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 216
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64587d5d353804849b5b1a3c14475479
+      internalID: 4698433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_55
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 216
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6a76cdaae123e4fa5808947c35be2b
+      internalID: 892401339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_56
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 216
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a603f60b8fea3438b333571e1ff6ab
+      internalID: 1455790465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_57
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 216
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a160e908d3595114c82142a2e3ce1bc7
+      internalID: 1479102557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_58
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 216
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f74a578ba3f6047ac6c3ef482efb4b
+      internalID: -599112958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_59
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 216
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08619e525a1eda648986c5d17c4c3aba
+      internalID: 1766271202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_60
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 144
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7367a3b5ffad0ec42a89a219b516a1ea
+      internalID: 363180693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_61
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 144
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c8d0772f4f5344dab665358d6dae0b
+      internalID: -1599839564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_62
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 144
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab07e9c3279e3184c8062c5afb739b26
+      internalID: 995929507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_63
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 144
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b35c38d2b8bc0f4aaced27b9270d9c0
+      internalID: -1090923123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_64
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 144
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dc7f271b3294749a7666debc73221f
+      internalID: -1314524440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_65
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 144
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba93bfe140d3644eb8122628cd53b37
+      internalID: -1103039676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_66
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 144
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b39073044670944b7fbe4a9e140616
+      internalID: -1605487113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_67
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 144
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a36229e48258b4f9c226d86cd2cffd
+      internalID: 1347721816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_68
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 144
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea70c4509df42b4e94b428749a2d056
+      internalID: 205070049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_69
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 144
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246e67c1c9d014545b739d3ca8866e8f
+      internalID: -1426305931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_70
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 144
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205f78bb974ed2f45b25187b18117601
+      internalID: 1283972363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_71
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 144
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2055c85ca00cfa43b7e62836f392462
+      internalID: 1786071174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_72
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 72
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0dd07c0fbbcc144a9e0cec29c0bfe6b
+      internalID: 1248642199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_73
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 72
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930d3c20855258246ad918ca886d9f3b
+      internalID: -1385650885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_74
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 72
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c98af317c55fd47bc1d53a0a80ece0
+      internalID: -889826241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_75
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 72
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d4b2f562c20db4080a31c12029a204
+      internalID: -427189356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_76
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 72
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e9c0da22bd3e54ca00d5ad5940ee8c
+      internalID: 1013118677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_77
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 72
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f99f71502514cd48b18a4047e496996
+      internalID: -825114814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_78
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 72
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db37d90a20b715c43b145bf924d1fa27
+      internalID: -1633176258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_79
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 72
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea3d9154311fe14aa2ef312ff846cd8
+      internalID: -1234675429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_80
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 72
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0515421abdf20274b85faf30627bb462
+      internalID: 266544466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_81
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 72
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64cb18dde2e78d42a7c8bb76c940695
+      internalID: 821970690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_82
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 72
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 018b89ddac2d31a46b30f6d4bd2802b5
+      internalID: 736447567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_83
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 72
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e97847b654f1564a88bee29b9cffc22
+      internalID: 1122124080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_84
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6768e4f765b8c4fb383aed0839142f
+      internalID: 1828131348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_85
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c7205820fd2f546a1e2ad933eae643
+      internalID: -2076346837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_86
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aba8de66e47a554987cec7c254a2560
+      internalID: 727058239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_87
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d604cfbcffa5b47844cbafcbfb846a
+      internalID: 426744720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_88
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8175c73921571e44b6399a2352964fc
+      internalID: -2044687704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_89
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5e2027b8e23694cbf255698ee45306
+      internalID: 461830642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_90
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60487bf0c977694ea2593b3ffdedcba
+      internalID: -1559224763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_91
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 0
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e001307b1960f4498e28f756997d2a
+      internalID: 2145691866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_92
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 0
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46db1f1ca3fc6164f980672c24d14ab5
+      internalID: -1304170249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_93
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335d64335abb50d4e89e1d808f54c76b
+      internalID: 1120885580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_94
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 0
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b1e8baeb0e8624880761677117721a
+      internalID: -266754868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motw_95
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 0
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d0114c4b62e89e4091352d7dbc563be
+      internalID: -897648378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +2130,103 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      motw_0: 506325763
+      motw_1: -1562737582
+      motw_10: 1406019906
+      motw_11: 1209097579
+      motw_12: -345749861
+      motw_13: -43856851
+      motw_14: 679891843
+      motw_15: 1972465661
+      motw_16: -821702831
+      motw_17: -729376920
+      motw_18: -57935935
+      motw_19: 1736215319
+      motw_2: 312599923
+      motw_20: -1643872186
+      motw_21: 857524063
+      motw_22: -420747003
+      motw_23: -329999481
+      motw_24: 755693569
+      motw_25: -755376684
+      motw_26: 296852428
+      motw_27: -1587192022
+      motw_28: 1453291497
+      motw_29: 1843012229
+      motw_3: 655567210
+      motw_30: -10820211
+      motw_31: -1545104239
+      motw_32: -784728106
+      motw_33: 1622840967
+      motw_34: -1310704733
+      motw_35: -562791381
+      motw_36: -1524774329
+      motw_37: -774548180
+      motw_38: -1567721043
+      motw_39: 999523585
+      motw_4: 327382499
+      motw_40: 2123266261
+      motw_41: 1135949182
+      motw_42: -1944787501
+      motw_43: 775160901
+      motw_44: -800493257
+      motw_45: 1180668317
+      motw_46: -1971700028
+      motw_47: -1275658665
+      motw_48: -476869465
+      motw_49: 2046324980
+      motw_5: -1230403216
+      motw_50: -721785049
+      motw_51: 493932676
+      motw_52: 1730454458
+      motw_53: 270560231
+      motw_54: 4698433
+      motw_55: 892401339
+      motw_56: 1455790465
+      motw_57: 1479102557
+      motw_58: -599112958
+      motw_59: 1766271202
+      motw_6: -387520060
+      motw_60: 363180693
+      motw_61: -1599839564
+      motw_62: 995929507
+      motw_63: -1090923123
+      motw_64: -1314524440
+      motw_65: -1103039676
+      motw_66: -1605487113
+      motw_67: 1347721816
+      motw_68: 205070049
+      motw_69: -1426305931
+      motw_7: 855186444
+      motw_70: 1283972363
+      motw_71: 1786071174
+      motw_72: 1248642199
+      motw_73: -1385650885
+      motw_74: -889826241
+      motw_75: -427189356
+      motw_76: 1013118677
+      motw_77: -825114814
+      motw_78: -1633176258
+      motw_79: -1234675429
+      motw_8: -1935897064
+      motw_80: 266544466
+      motw_81: 821970690
+      motw_82: 736447567
+      motw_83: 1122124080
+      motw_84: 1828131348
+      motw_85: -2076346837
+      motw_86: 727058239
+      motw_87: 426744720
+      motw_88: -2044687704
+      motw_89: 461830642
+      motw_9: -1794573913
+      motw_90: -1559224763
+      motw_91: 2145691866
+      motw_92: -1304170249
+      motw_93: 1120885580
+      motw_94: -266754868
+      motw_95: -897648378
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
