@@ -10,7 +10,7 @@ public class MenuController : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log("MenuController pushing updates");
+        Debug.Log("MenuController pushing updates");
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("Menu opened");
