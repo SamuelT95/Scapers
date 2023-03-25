@@ -32382,7 +32382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622202851}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 1, z: 0}
+  m_LocalPosition: {x: 17.5, y: 6.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55382,10 +55382,10 @@ GameObject:
   - component: {fileID: 1956663655}
   - component: {fileID: 1956663654}
   - component: {fileID: 1956663657}
-  - component: {fileID: 1956663659}
   - component: {fileID: 1956663660}
   - component: {fileID: 1956663661}
   - component: {fileID: 1956663662}
+  - component: {fileID: 1956663663}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -55502,26 +55502,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &1956663659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1956663653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 002a3b9559a8ed74d9345eee06635933, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: 0
-  baseMaxHealth: 0
-  baseDefense: 0
-  attacks:
-  - {fileID: 11400000, guid: 506bb8dfb3751874a87b9eca7c8c75e6, type: 2}
-  - {fileID: 11400000, guid: 0191142ddc7e6a04cbeb7306a46df914, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!65 &1956663660
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55566,6 +55546,35 @@ MonoBehaviour:
   menuPanel: {fileID: 426047512}
   quitButton: {fileID: 1802258002}
   continueButton: {fileID: 1299995811}
+--- !u!114 &1956663663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956663653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b56268396e3a0340be93b1a3c4d5696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  baseMaxHealth: 0
+  baseDefense: 0
+  physicalAttacks:
+  - {fileID: 11400000, guid: 41a221fb81e71f5469c84725561d03df, type: 2}
+  - {fileID: 11400000, guid: 42d0c389981c5d640885a63f38b6ed19, type: 2}
+  - {fileID: 11400000, guid: 41a221fb81e71f5469c84725561d03df, type: 2}
+  - {fileID: 11400000, guid: 42d0c389981c5d640885a63f38b6ed19, type: 2}
+  magicalAttacks:
+  - {fileID: 11400000, guid: a04b5b26843a29a488bf89cb65cfb160, type: 2}
+  - {fileID: 11400000, guid: c4137c7563a0fdf42ba20a22e21868d4, type: 2}
+  - {fileID: 11400000, guid: a04b5b26843a29a488bf89cb65cfb160, type: 2}
+  - {fileID: 11400000, guid: c4137c7563a0fdf42ba20a22e21868d4, type: 2}
+  physicalWeakness: 0
+  magicalWeakness: 0
+  physicalResistance: 0
+  magicalResistance: 0
 --- !u!1001 &1369703743665660517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55982,11 +55991,20 @@ MonoBehaviour:
   level: 1
   baseMaxHealth: 100
   baseDefense: 2
-  attacks:
+  physicalAttacks:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  magicalAttacks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  physicalWeakness: 0
+  magicalWeakness: 0
+  physicalResistance: 0
+  magicalResistance: 0
 --- !u!114 &9134991212788735992
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,6 +13,9 @@ TagManager:
   - PlayerLevel
   - EnemyLocation
   - BackGround
+  - physical_buttons
+  - magical_buttons
+  - back_buttons
   layers:
   - Default
   - TransparentFX
