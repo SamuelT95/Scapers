@@ -157,13 +157,17 @@ public class BattleMenuManager : MonoBehaviour
         switch(dialogState)
         {
             case 0:
-            case 2:
                 dialogText.text = nextMessage;
+                updateEnemeyHealth();
                 break;
             case 1:
                 Attack attack = enemy.GetRandomAttack();
                 dialogText.text = enemy.name + " used " + attack.name;
                 useAttack(attack, enemy, player);
+                break;
+            case 2:
+                dialogText.text = nextMessage;
+                updatePlayerHealth();
                 break;
             case 3:
                 dialogState = 0;
@@ -174,5 +178,37 @@ public class BattleMenuManager : MonoBehaviour
         dialogState++;
     }
 
+    public void updatePlayerHealth()
+    {
+        float percent = player.getHealth() / player.getMaxHealth();
+        GameObject healthBar = GameObject.Find("PlayerHealth");
+        healthBar.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 4 * percent);
+        setHealthBarColor(healthBar, percent);
 
+    }
+
+    public void updateEnemeyHealth()
+    {
+        float percent = enemy.getHealth() / enemy.getMaxHealth();
+        GameObject healthBar = GameObject.Find("EnemyHealth");
+        healthBar.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 4*percent);
+        setHealthBarColor(healthBar, percent);
+    }
+
+    public void setHealthBarColor(GameObject healthbar, float percent)
+    {
+
+        if (percent > 0.66f)
+        {
+            healthbar.GetComponent<Image>().color = Color.green;
+        }
+        else if (percent > 0.33f)
+        {
+            healthbar.GetComponent<Image>().color = Color.yellow;
+        }
+        else
+        {
+            healthbar.GetComponent<Image>().color = Color.red;
+        }
+    }
 }

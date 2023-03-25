@@ -55991,7 +55991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Ghost
   level: 1
-  baseMaxHealth: 100
+  baseMaxHealth: 10
   baseDefense: 1
   physicalAttacks:
   - {fileID: 11400000, guid: 41a221fb81e71f5469c84725561d03df, type: 2}
