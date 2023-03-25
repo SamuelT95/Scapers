@@ -6,6 +6,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     // public attributes of characters, meant to be modified in unity
+    public string Name;
     public int level;
     public float baseMaxHealth;
     public float baseDefense;

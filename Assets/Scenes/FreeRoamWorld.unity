@@ -55558,9 +55558,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b56268396e3a0340be93b1a3c4d5696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
-  baseMaxHealth: 0
-  baseDefense: 0
+  Name: Lord Farquad
+  level: 1
+  baseMaxHealth: 10
+  baseDefense: 1
   physicalAttacks:
   - {fileID: 11400000, guid: 41a221fb81e71f5469c84725561d03df, type: 2}
   - {fileID: 11400000, guid: 42d0c389981c5d640885a63f38b6ed19, type: 2}
@@ -55988,9 +55989,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002a3b9559a8ed74d9345eee06635933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Ghost
   level: 1
   baseMaxHealth: 100
-  baseDefense: 2
+  baseDefense: 1
   physicalAttacks:
   - {fileID: 0}
   - {fileID: 0}

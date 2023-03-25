@@ -124,11 +124,12 @@ public class BattleMenuManager : MonoBehaviour
 
     public void PhysAttack(int buttonNo)
     {
-        print(player.physicalAttacks[buttonNo].name);
+        print(player.physicalAttacks[buttonNo].tryAttack(player, enemy));
+        
     }
 
     public void MagAttack(int buttonNo)
     {
-        print(player.magicalAttacks[buttonNo].name);
+        print(player.magicalAttacks[buttonNo].tryAttack(player, enemy));
     }
 }

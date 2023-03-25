@@ -5,8 +5,11 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Heal : Attack
 {
-    internal override bool doAttack(Character caster, Character reciever)
+    internal override string doAttack(Character caster, Character reciever)
     {
-        return caster.Heal(caster.getModifiedHealth(Damage));
+        float damage = caster.getModifiedHealth(Damage);
+        caster.Heal(damage);
+
+        return caster.Name + " was healed for " + damage.ToString();
     }
 }
