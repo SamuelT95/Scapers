@@ -14,9 +14,14 @@ public class BattleMenuManager : MonoBehaviour
     private GameObject AttackMenu;
     private GameObject PhysicalAttackMenu;
     private GameObject MagicAttackMenu;
+    private GameObject DialogMenu;
+
+    private string nextMessage;
+    private int dialogState = 0;
 
     Player player;
     Character enemy;
+    TextMeshProUGUI dialogText;
 
     public void Start()
     {
@@ -26,6 +31,7 @@ public class BattleMenuManager : MonoBehaviour
         Button heal = GameObject.Find("ButtonHeal").GetComponent<Button>();
         Button physical = GameObject.Find("ButtonPhysical").GetComponent<Button>();
         Button magical = GameObject.Find("ButtonMagic").GetComponent<Button>();
+        Button next = GameObject.Find("ButtonNext").GetComponent<Button>();
 
         GameObject[] physButtons = GameObject.FindGameObjectsWithTag("physical_buttons");
         GameObject[] magButtons = GameObject.FindGameObjectsWithTag("magical_buttons");
@@ -41,13 +47,16 @@ public class BattleMenuManager : MonoBehaviour
         heal.onClick.AddListener(Heal);
         physical.onClick.AddListener(Physical);
         magical.onClick.AddListener(Magical);
+        next.onClick.AddListener(Next);
 
         //get individual menus
         BattleMenu = GameObject.Find("BattleMenu");
         AttackMenu = GameObject.Find("AttackMenu");
         PhysicalAttackMenu = GameObject.Find("PhysicalAttackMenu");
         MagicAttackMenu = GameObject.Find("MagicalAttackMenu");
+        DialogMenu = GameObject.Find("DialogMenu");
 
+        dialogText = DialogMenu.GetComponentInChildren<TextMeshProUGUI>();
 
         //set listeners for back buttons
         for (int i = 0; i < backButtons.Length; i++)
@@ -73,6 +82,7 @@ public class BattleMenuManager : MonoBehaviour
         AttackMenu.SetActive(false);
         PhysicalAttackMenu.SetActive(false);
         MagicAttackMenu.SetActive(false);
+        DialogMenu.SetActive(false);
     }
 
     public void Attack()
@@ -122,14 +132,47 @@ public class BattleMenuManager : MonoBehaviour
         MagicAttackMenu.SetActive(true);
     }
 
+    public void useAttack(Attack attack, Character caster, Character reciever)
+    {
+        dialogText.text = caster.Name + " used " + attack.name;
+        nextMessage = attack.tryAttack(caster, reciever);
+    }
+
     public void PhysAttack(int buttonNo)
     {
-        print(player.physicalAttacks[buttonNo].tryAttack(player, enemy));
-        
+        PhysicalAttackMenu.SetActive(false);
+        DialogMenu.SetActive(true);
+        useAttack(player.physicalAttacks[buttonNo], player, enemy);
     }
 
     public void MagAttack(int buttonNo)
     {
-        print(player.magicalAttacks[buttonNo].tryAttack(player, enemy));
+        MagicAttackMenu.SetActive(false);
+        DialogMenu.SetActive(true);
+        useAttack(player.magicalAttacks[buttonNo], player, enemy);
     }
+
+    public void Next()
+    {
+        switch(dialogState)
+        {
+            case 0:
+            case 2:
+                dialogText.text = nextMessage;
+                break;
+            case 1:
+                Attack attack = enemy.GetRandomAttack();
+                dialogText.text = enemy.name + " used " + attack.name;
+                useAttack(attack, enemy, player);
+                break;
+            case 3:
+                dialogState = 0;
+                DialogMenu.SetActive(false);
+                BattleMenu.SetActive(true);
+                return;
+        }
+        dialogState++;
+    }
+
+
 }

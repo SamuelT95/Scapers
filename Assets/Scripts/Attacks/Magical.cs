@@ -38,7 +38,7 @@ public class Magical : Attack
             effective -= 1;
         }
 
-        string response = "The " + reciever.Name + " was damaged for " + damage.ToString();
+        string response = reciever.Name + " was damaged for " + damage.ToString();
 
         switch(effective)
         {

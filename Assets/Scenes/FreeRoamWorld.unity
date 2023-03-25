@@ -55994,12 +55994,12 @@ MonoBehaviour:
   baseMaxHealth: 100
   baseDefense: 1
   physicalAttacks:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 41a221fb81e71f5469c84725561d03df, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   magicalAttacks:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: a04b5b26843a29a488bf89cb65cfb160, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
