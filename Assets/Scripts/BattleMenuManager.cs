@@ -16,6 +16,7 @@ public class BattleMenuManager : MonoBehaviour
     private GameObject MagicAttackMenu;
 
     Player player;
+    Character enemy;
 
     public void Start()
     {
@@ -32,7 +33,7 @@ public class BattleMenuManager : MonoBehaviour
 
         //initialise our player
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-
+        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Character>();
 
         //assign functions for single buttons
         attack.onClick.AddListener(Attack);

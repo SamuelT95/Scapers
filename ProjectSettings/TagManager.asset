@@ -16,6 +16,7 @@ TagManager:
   - physical_buttons
   - magical_buttons
   - back_buttons
+  - Enemy
   layers:
   - Default
   - TransparentFX

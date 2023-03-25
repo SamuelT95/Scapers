@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -7248717585706416885}
   m_Layer: 0
   m_Name: Ghost 1
-  m_TagString: Ghost
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,11 +105,20 @@ MonoBehaviour:
   level: 1
   baseMaxHealth: 100
   baseDefense: 2
-  attacks:
+  physicalAttacks:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  magicalAttacks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  physicalWeakness: 0
+  magicalWeakness: 0
+  physicalResistance: 0
+  magicalResistance: 0
 --- !u!114 &4748596450251917622
 MonoBehaviour:
   m_ObjectHideFlags: 0
