@@ -18,6 +18,9 @@ public class DialogManager : MonoBehaviour
 
     // Shows the DialogManager to a global scope
     public static DialogManager Instance { get; private set; }
+    /// <summary>
+    /// call once every frame
+    /// </summary>
     private void Awake()
     {
         Instance ??= this; // ??= operator sets Instance to 'this' only if it is currently null, so it's set only once.
@@ -27,7 +30,11 @@ public class DialogManager : MonoBehaviour
     int currentLine = 0;
     bool isTyping;
 
-
+    /// <summary>
+    /// Shows a dialof box to the player
+    /// </summary>
+    /// <param name="dialog"></param>
+    /// <returns></returns>
     public IEnumerator ShowDialog(Dialog dialog)
     {
         yield return new WaitForEndOfFrame();
@@ -37,6 +44,9 @@ public class DialogManager : MonoBehaviour
         StartCoroutine(TypeDialog(dialog.Lines[0]));
     }
 
+    /// <summary>
+    /// handles input
+    /// </summary>
     public void HandleUpdate()
     {
         if (Input.GetKeyUp(KeyCode.Space))
@@ -67,8 +77,13 @@ public class DialogManager : MonoBehaviour
 
     }
 
-    // Shows dialog text letter by letter rather than all at once.
-    // Shows all the text at once if the user presses spacebar during the iteration.
+
+    /// <summary>
+    ///  Shows dialog text letter by letter rather than all at once.
+    ///   Shows all the text at once if the user presses spacebar during the iteration.
+    /// </summary>
+    /// <param name="line"></param>
+    /// <returns></returns>
     public IEnumerator TypeDialog(string line)
     {
 

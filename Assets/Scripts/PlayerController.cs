@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+/// <summary>
+/// responible for handling input from the user and making the player move
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed; // determines how fast the player can move
@@ -12,14 +15,18 @@ public class PlayerController : MonoBehaviour
     public LayerMask solidObjectsLayer;
     public LayerMask interactableLayer;
 
-    // Loads the character and animates it
+    /// <summary>
+    /// Loads the character and animates it
+    /// </summary>
     private void Awake()
     {
         animator = GetComponent<Animator>();
     }
 
-
-    public void HandleUpdate() // 60 times per second this function will run
+    /// <summary>
+    /// 60 times per second this function will run, handles the input from the player and moves the player appropriately
+    /// </summary>
+    public void HandleUpdate() 
     {
         //prevents movement when in battle state
         GameController gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -62,7 +69,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Checks if the position in front of the player has an interactable object.
+    /// <summary>
+    /// Checks if the position in front of the player has an interactable object.
+    /// </summary>
     void Interact()
     {
         var facingDirection = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
@@ -77,9 +86,14 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    // This function will move current position to new desired position using movement speed.
-    // It will slide the player's character to the new position, instead of teleporting.
-    // Vector3 has an xyz value and Move requires Vector3.
+
+    /// <summary>
+    /// This function will move current position to new desired position using movement speed.
+    /// It will slide the player's character to the new position, instead of teleporting.
+    /// Vector3 has an xyz value and Move requires Vector3.
+    /// </summary>
+    /// <param name="targetPosition"></param>
+    /// <returns></returns>
     IEnumerator Move(Vector3 targetPosition)
     {
         isMoving = true;
@@ -101,7 +115,12 @@ public class PlayerController : MonoBehaviour
         isMoving = false;
     }
 
-    // Checks if a tile in the overworld is a walkable tile.
+    
+    /// <summary>
+    /// Checks if a tile in the overworld is a walkable tile.
+    /// </summary>
+    /// <param name="targetPosition"></param>
+    /// <returns></returns>
     private bool IsWalkable(Vector3 targetPosition)
     {
         if (Physics2D.OverlapCircle(targetPosition, 0.001f, solidObjectsLayer | interactableLayer) != null)

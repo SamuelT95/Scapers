@@ -1,6 +1,9 @@
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// responsible for the movement off ghost enemies
+/// </summary>
 public class GhostController : MonoBehaviour
 {
     public float moveSpeed; // determines how fast the player can move
@@ -8,7 +11,10 @@ public class GhostController : MonoBehaviour
     public float acceleration;
     public float engagementDistance;
 
-    private void Update() // 60 times per second this function will run
+    /// <summary>
+    /// 60 times per second this function will run, tells the ghost to move to the player if within distance and player is not facing ghost
+    /// </summary>
+    private void Update()
     {
         //prevents movement when in battle state
         GameController gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class is responsible for making normal enemies move
+/// </summary>
 public class EnemyMover : MonoBehaviour
 {
     public float moveSpeed; // determines how fast the player can move
@@ -12,14 +15,18 @@ public class EnemyMover : MonoBehaviour
     public LayerMask interactableLayer;
     public float engagementDistance;
 
-    // Loads the character and animates it
+    /// <summary>
+    /// Loads the character and animates it
+    /// </summary>
     private void Awake()
     {
         animator = GetComponent<Animator>();
     }
 
-
-    public void Update() // 60 times per second this function will run
+    /// <summary>
+    ///  60 times per second this function will run
+    /// </summary>
+    public void Update() 
     {
         //prevents movement when in battle state
         GameController gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -91,7 +98,9 @@ public class EnemyMover : MonoBehaviour
         }
     }
 
-    // Checks if the position in front of the player has an interactable object.
+    /// <summary>
+    /// Checks if the position in front of the player has an interactable object.
+    /// </summary>
     void Interact()
     {
         var facingDirection = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
@@ -106,9 +115,13 @@ public class EnemyMover : MonoBehaviour
 
     }
 
-    // This function will move current position to new desired position using movement speed.
-    // It will slide the player's character to the new position, instead of teleporting.
-    // Vector3 has an xyz value and Move requires Vector3.
+    /// <summary>
+    /// This function will move current position to new desired position using movement speed.
+    /// It will slide the player's character to the new position, instead of teleporting.
+    /// Vector3 has an xyz value and Move requires Vector3.
+    /// </summary>
+    /// <param name="targetPosition"></param>
+    /// <returns></returns>
     IEnumerator Move(Vector3 targetPosition)
     {
         isMoving = true;
@@ -130,7 +143,11 @@ public class EnemyMover : MonoBehaviour
         isMoving = false;
     }
 
-    // Checks if a tile in the overworld is a walkable tile.
+    /// <summary>
+    /// Checks if a tile is walkable
+    /// </summary>
+    /// <param name="targetPosition"></param>
+    /// <returns></returns>
     private bool IsWalkable(Vector3 targetPosition)
     {
         if (Physics2D.OverlapCircle(targetPosition, 0.001f, solidObjectsLayer | interactableLayer) != null)

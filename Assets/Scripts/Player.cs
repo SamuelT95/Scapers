@@ -2,10 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// THis classs is responsible for giving exp to the player
+/// </summary>
 public class Player : Character
 {
     private int exp = 0;
 
+    /// <summary>
+    /// adds exp to the player and updates his level
+    /// </summary>
+    /// <param name="exp"></param>
     public void addExp(int exp)
     {
         this.exp += exp;

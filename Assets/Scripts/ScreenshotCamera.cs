@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// responsible for creating a screenshot of the environment and using it as the battle scene background
+/// </summary>
 public class ScreenshotCamera : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -20,6 +23,10 @@ public class ScreenshotCamera : MonoBehaviour
     public Camera screenshotCamera;
     [SerializeField] string ignoreTag;
 
+    /// <summary>
+    /// when the condition is met take the screenshot
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -28,6 +35,10 @@ public class ScreenshotCamera : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Takes a picture and sets it to a canvas
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator TakeScreenShot()
     {
         yield return new WaitForEndOfFrame();
