@@ -7,12 +7,19 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// This class deals with starting and stopping the battle sequnce
+/// </summary>
 public class BattleManager : MonoBehaviour
 {
     [SerializeField] Canvas canvas;
     private Vector3 overworldPosition;
     // Singleton pattern
     public static BattleManager Instance { get; internal set; }
+
+    /// <summary>
+    /// called when activated
+    /// </summary>
     private void Awake() 
     {
         if (Instance == null)
@@ -27,13 +34,16 @@ public class BattleManager : MonoBehaviour
     }
     // Singleton pattern ends
 
-    // Update is called once per frame. This is where you detect keystrokes
     public void HandleUpdate()
     {
-        /*Debug.Log("GameState is currently on battle mode");*/
 
     }
 
+    /// <summary>
+    /// Starts a battle with the specified enemy
+    /// </summary>
+    /// <param name="enemy">The enemy that will be moved to the battle scene</param>
+    /// <returns></returns>
     public IEnumerator StartBattle(GameObject enemy)
     {
         Debug.Log("Enemy:" + enemy);
@@ -101,7 +111,9 @@ public class BattleManager : MonoBehaviour
         EndBattle();
     }
 
-
+    /// <summary>
+    /// unloads the scene after a delay
+    /// </summary>
     public void EndBattle()
     {
         StartCoroutine(UnloadSceneAfterDelay("FreeRoamWorld", 20f)); // 5 second delay
@@ -109,6 +121,12 @@ public class BattleManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="sceneName">The scene to return to</param>
+    /// <param name="delay"> unloads the scene after the specified delay</param>
+    /// <returns></returns>
     IEnumerator UnloadSceneAfterDelay(string sceneName, float delay)
     {
         yield return new WaitForSeconds(delay);

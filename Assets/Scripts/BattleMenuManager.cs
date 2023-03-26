@@ -5,6 +5,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// This class handles the menus with a batlle scene
+/// </summary>
 public class BattleMenuManager : MonoBehaviour
 {
     
@@ -23,6 +26,9 @@ public class BattleMenuManager : MonoBehaviour
     Character enemy;
     TextMeshProUGUI dialogText;
 
+    /// <summary>
+    /// Called once, basically an intializer
+    /// </summary>
     public void Start()
     {
         //get all buttons
@@ -67,15 +73,27 @@ public class BattleMenuManager : MonoBehaviour
         //set text of attack buttons and apply listeners
         for (int i = 0; i < physButtons.Length; i++)
         {
-            //set text of buttons to their respective names
-            magButtons[i].GetComponent<Button>().GetComponentInChildren<TextMeshProUGUI>().text = player.magicalAttacks[i].name;
-            physButtons[i].GetComponent<Button>().GetComponentInChildren<TextMeshProUGUI>().text = player.physicalAttacks[i].name;
-
-            //if you use i directly, it will create a reference of i and when the function is called later it will always be the last value it was
             int num = i;
+            if (player.physicalAttacks[i] == null)
+            {
+                physButtons[i].SetActive(false);
+            }
+            else
+            {
+                physButtons[i].GetComponent<Button>().GetComponentInChildren<TextMeshProUGUI>().text = player.physicalAttacks[i].name;
+                physButtons[i].GetComponent<Button>().onClick.AddListener(() => PhysAttack(num));
+            }
 
-            magButtons[i].GetComponent<Button>().onClick.AddListener(() => MagAttack(num));
-            physButtons[i].GetComponent<Button>().onClick.AddListener(() => PhysAttack(num));
+            if (player.magicalAttacks[i] == null)
+            {
+                magButtons[i].SetActive(false);
+            }
+            else
+            {
+                magButtons[i].GetComponent<Button>().GetComponentInChildren<TextMeshProUGUI>().text = player.magicalAttacks[i].name;
+                magButtons[i].GetComponent<Button>().onClick.AddListener(() => MagAttack(num));
+            }
+
         }
 
         //disable all but one menu
@@ -85,12 +103,19 @@ public class BattleMenuManager : MonoBehaviour
         DialogMenu.SetActive(false);
     }
 
+    /// <summary>
+    /// disables and enables appropriate states when button pushed
+    /// </summary>
     public void Attack()
     {
         BattleMenu.SetActive(false);
         AttackMenu.SetActive(true);
     }
 
+
+    /// <summary>
+    /// disables and enables appropriate states when back button pushed
+    /// </summary>
     public void Back()
     {
         if (AttackMenu.activeSelf)
@@ -120,24 +145,42 @@ public class BattleMenuManager : MonoBehaviour
         Debug.Log("You ran");
     }
 
+
+    /// <summary>
+    /// disables and enables appropriate states when button pushed
+    /// </summary>
     public void Physical()
     {
         AttackMenu.SetActive(false);
         PhysicalAttackMenu.SetActive(true);
     }
 
+
+    /// <summary>
+    /// disables and enables appropriate states when button pushed
+    /// </summary>
     public void Magical()
     {
         AttackMenu.SetActive(false);
         MagicAttackMenu.SetActive(true);
     }
 
+    /// <summary>
+    /// will execute an attack and store the return message for display
+    /// </summary>
+    /// <param name="attack">The attack to use</param>
+    /// <param name="caster">The character that used the attack</param>
+    /// <param name="reciever">the character that will be attacked</param>
     public void useAttack(Attack attack, Character caster, Character reciever)
     {
         dialogText.text = caster.Name + " used " + attack.name;
         nextMessage = attack.tryAttack(caster, reciever);
     }
 
+    /// <summary>
+    /// called when the player uses an attack
+    /// </summary>
+    /// <param name="buttonNo">The number of the button that was pressed</param>
     public void PhysAttack(int buttonNo)
     {
         PhysicalAttackMenu.SetActive(false);
@@ -145,6 +188,11 @@ public class BattleMenuManager : MonoBehaviour
         useAttack(player.physicalAttacks[buttonNo], player, enemy);
     }
 
+
+    /// <summary>
+    /// called when the player uses an attack
+    /// </summary>
+    /// <param name="buttonNo">The number of the button that was pressed</param>
     public void MagAttack(int buttonNo)
     {
         MagicAttackMenu.SetActive(false);
@@ -152,6 +200,9 @@ public class BattleMenuManager : MonoBehaviour
         useAttack(player.magicalAttacks[buttonNo], player, enemy);
     }
 
+    /// <summary>
+    /// when the next button is pressed, advance based on current state
+    /// </summary>
     public void Next()
     {
         switch(dialogState)
@@ -178,6 +229,9 @@ public class BattleMenuManager : MonoBehaviour
         dialogState++;
     }
 
+    /// <summary>
+    /// Changes the players health bar to represent their health
+    /// </summary>
     public void updatePlayerHealth()
     {
         float percent = player.getHealth() / player.getMaxHealth();
@@ -187,6 +241,9 @@ public class BattleMenuManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// changes the enemys health bar to represent their health
+    /// </summary>
     public void updateEnemeyHealth()
     {
         float percent = enemy.getHealth() / enemy.getMaxHealth();
@@ -195,6 +252,12 @@ public class BattleMenuManager : MonoBehaviour
         setHealthBarColor(healthBar, percent);
     }
 
+    /// <summary>
+    /// Sets the colour of the healthbar based on the remaining health
+    /// Sets the colour of the healthbar based on the remaining health
+    /// </summary>
+    /// <param name="healthbar"></param>
+    /// <param name="percent"></param>
     public void setHealthBarColor(GameObject healthbar, float percent)
     {
 

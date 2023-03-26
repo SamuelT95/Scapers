@@ -16,7 +16,7 @@ public class Physical : Attack
 {
     static float weaknessMod = 2.0f;
     static float resistanceMod = 2.0f;
-    public PhysicalType physicalType;
+    public PhysicalType physicalType = PhysicalType.None;
 
     internal override string doAttack(Character caster, Character reciever)
     {

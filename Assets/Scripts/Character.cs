@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// represnts a character that can enter battles in the world
+/// </summary>
 public class Character : MonoBehaviour
 {
     // public attributes of characters, meant to be modified in unity
@@ -34,6 +37,9 @@ public class Character : MonoBehaviour
         levelUp();
     }
 
+    /// <summary>
+    /// Sets the players stats based on their level
+    /// </summary>
     internal void levelUp()
     {
         maxHealth = baseMaxHealth;
@@ -46,55 +52,101 @@ public class Character : MonoBehaviour
         health = maxHealth;
     }
 
+    /// <summary>
+    /// returns the damage based on the players level
+    /// </summary>
+    /// <param name="damage">the base damage</param>
+    /// <returns></returns>
     internal float getModifiedDamage(float damage)
     {
+        if(damage <= 0.0f)
+        {
+            return 0.0f;
+        }
         damage = damage * Mathf.Pow(1 + damageModifier, level);
 
         return damage;
     }
 
+    /// <summary>
+    /// returns the health based on the palyeurs level
+    /// </summary>
+    /// <param name="amount"> the base health of the player</param>
+    /// <returns></returns>
     internal float getModifiedHealth(float amount)
     {
         amount = amount * Mathf.Pow(1 + healthModifier, level);
         return amount;
     }
 
+
+    /// <summary>
+    /// returns the characters current health
+    /// </summary>
+    /// <returns></returns>
     public float getHealth()
     {
         return health;
     }
 
+    /// <summary>
+    /// returns the characters maxhealth
+    /// </summary>
+    /// <returns></returns>
     public float getMaxHealth()
     {
         return maxHealth;
     }
 
+    /// <summary>
+    /// Damages the character based on the specified amount
+    /// </summary>
+    /// <param name="damage"></param>
+    /// <returns></returns>
     public bool Takedamage(float damage)
     {
+        if(defense > damage)
+        {
+            return true;
+        }
         health -= damage - defense;
         return true;
     }
 
+    /// <summary>
+    /// Gets a random attack from the pool of attacks
+    /// </summary>
+    /// <returns></returns>
     public Attack GetRandomAttack()
     {
-        int type = UnityEngine.Random.Range(0, 1);
-        int selection = UnityEngine.Random.Range(0, 4);
-
         Attack attack = null;
 
-        if(type == 0)
+        List<Attack> attacks = new List<Attack>();
+        attacks.AddRange(physicalAttacks);
+        attacks.AddRange(magicalAttacks);
+
+        int selection = UnityEngine.Random.Range(0, attacks.Capacity);
+
+        attack = attacks[selection];
+
+        while(attack == null )
         {
-            attack = physicalAttacks[selection];
-        }
-        else
-        {
-            attack = magicalAttacks[selection];
+            selection++;
+            if(attacks.Capacity > 0)
+            {
+                attack= attacks[selection % attacks.Capacity];
+            }
+            else
+            {
+                Physical struggle = ScriptableObject.CreateInstance<Physical>();
+                struggle.Damage = 1;
+                struggle.Name = "Struggle";
+                struggle.FailureRate = 1;
+                struggle.physicalType = PhysicalType.None;
+                return struggle;
+            }
         }
 
-        if(attack == null)
-        {
-            attack = GetRandomAttack();
-        }
 
         return attack;
     }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4098c677b1af2d4e8888ce6de03c567, type: 3}
   m_Name: Pierce
   m_EditorClassIdentifier: 
-  Name: 
-  Damage: 0
-  FailureRate: 0
+  Name: Pierce
+  Damage: 3
+  FailureRate: 0.5
+  physicalType: 0
