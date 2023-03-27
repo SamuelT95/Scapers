@@ -187,6 +187,10 @@ PrefabInstance:
       value: PumpkinMan
       objectReference: {fileID: 0}
     - target: {fileID: 9134991212916259602, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: Name
+      value: Pumpkin Man
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134991212916259602, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
       propertyPath: baseDefense
       value: 1
       objectReference: {fileID: 0}
@@ -330,6 +334,10 @@ PrefabInstance:
       objectReference: {fileID: 559588469, guid: 751ba310339f01e44a7278fd4afac174, type: 3}
     - target: {fileID: 6387843623689192690, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
       propertyPath: m_Name
+      value: Reaper
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134991212916259602, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: Name
       value: Reaper
       objectReference: {fileID: 0}
     - target: {fileID: 9134991212916259602, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
@@ -29597,6 +29605,87 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &929140685
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -7248717585706416885, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e3b6f62ceea02ce4cbbde85e35f511c3, type: 2}
+    - target: {fileID: 6387843623689192688, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387843623689192688, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387843623689192688, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387843623689192688, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387843623689192688, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387843623689192688, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387843623689192688, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387843623689192688, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387843623689192688, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387843623689192688, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387843623689192688, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387843623689192689, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1406019906, guid: 228a2739bbc528f4eb2aa19d211b7721, type: 3}
+    - target: {fileID: 6387843623689192690, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: m_Name
+      value: SkeletonPirate
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134991212916259602, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: Name
+      value: Skeleton Pirate
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134991212916259602, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: baseDefense
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134991212916259602, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: baseMaxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134991212916259602, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: physicalAttacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 41a221fb81e71f5469c84725561d03df, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
 --- !u!65 &950428909
 BoxCollider:
   m_ObjectHideFlags: 0
