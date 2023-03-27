@@ -103,7 +103,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: reaper_blade_1_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 108
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4044945e83ec4c34abdd2cb5b9d0100d
+      internalID: 559588469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_blade_1_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 108
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5be2dcb035602d48b92277735c23218
+      internalID: -1683960500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_blade_1_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 108
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a06a3e5bef60a4b8e63954a2522bda
+      internalID: -1807288012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_blade_1_3
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 72
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91826479c802eb34b95471c7ff85afdc
+      internalID: 710827817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_blade_1_4
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 72
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f525fac87c769a4b97cd8c37c6d1329
+      internalID: -1766905096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_blade_1_5
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 72
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a83da3af4d974f547aeccfd496ca60aa
+      internalID: -2050095924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_blade_1_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 36
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 764e7e8dc46d1c94986d25ae2a4e1c8f
+      internalID: 600843064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_blade_1_7
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 36
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e713b05a0cbaaa742a9faf88368853e6
+      internalID: 1046591807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_blade_1_8
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 36
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99aee72ece7f4e44aadd0966fe57d45
+      internalID: 2097399786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_blade_1_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8bf729edb3a11e46b96a4478409516d
+      internalID: 1508260930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_blade_1_10
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ffbbbe3bbaae434d9f7f89874fca9c3
+      internalID: 1416510286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reaper_blade_1_11
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c15917ed7a808e41ae92bb39def690f
+      internalID: -206147161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +366,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      reaper_blade_1_0: 559588469
+      reaper_blade_1_1: -1683960500
+      reaper_blade_1_10: 1416510286
+      reaper_blade_1_11: -206147161
+      reaper_blade_1_2: -1807288012
+      reaper_blade_1_3: 710827817
+      reaper_blade_1_4: -1766905096
+      reaper_blade_1_5: -2050095924
+      reaper_blade_1_6: 600843064
+      reaper_blade_1_7: 1046591807
+      reaper_blade_1_8: 2097399786
+      reaper_blade_1_9: 1508260930
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
