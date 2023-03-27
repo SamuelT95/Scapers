@@ -116,7 +116,7 @@ public class BattleManager : MonoBehaviour
     /// </summary>
     public void EndBattle()
     {
-        StartCoroutine(UnloadSceneAfterDelay("FreeRoamWorld", 20f)); // 5 second delay
+        StartCoroutine(UnloadSceneAfterDelay("FreeRoamWorld", 2000f)); // 5 second delay
         Debug.Log("Ending battle");
 
     }
