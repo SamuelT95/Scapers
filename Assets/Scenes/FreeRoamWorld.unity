@@ -186,6 +186,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinMan
       objectReference: {fileID: 0}
+    - target: {fileID: 9134991212916259602, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: baseDefense
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134991212916259602, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: baseMaxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134991212916259602, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: physicalAttacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 41a221fb81e71f5469c84725561d03df, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
 --- !u!1 &30356603
@@ -320,6 +332,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Reaper
       objectReference: {fileID: 0}
+    - target: {fileID: 9134991212916259602, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: baseDefense
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134991212916259602, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: baseMaxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134991212916259602, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
+      propertyPath: physicalAttacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 41a221fb81e71f5469c84725561d03df, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b56a2e5f1b62d8248ab9a36d91f453c3, type: 3}
 --- !u!1 &279480100
@@ -56122,8 +56146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Ghost
-  level: 100
-  baseMaxHealth: 1e+11
+  level: 1
+  baseMaxHealth: 10
   baseDefense: 1
   physicalAttacks:
   - {fileID: 11400000, guid: 41a221fb81e71f5469c84725561d03df, type: 2}
