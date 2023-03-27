@@ -14,6 +14,9 @@ public class BattleManager : MonoBehaviour
 {
     [SerializeField] Canvas canvas;
     private Vector3 overworldPosition;
+    public bool isBattleOver = false;
+    public bool isGameOver = false;
+
     // Singleton pattern
     public static BattleManager Instance { get; internal set; }
 
@@ -36,7 +39,28 @@ public class BattleManager : MonoBehaviour
 
     public void HandleUpdate()
     {
+        
+    }
 
+    /// <summary>
+    /// Checks if a win or lose condition is found in a battle.
+    /// </summary>
+    public void checkBattleCondition()
+    {
+        if (isBattleOver)
+        {
+            isBattleOver = false; // flipping it back to prepare for the next fight
+            if (isGameOver)
+            {
+                Debug.Log("You lose"); // replace after with lose screen
+            }
+            else
+            {
+                Debug.Log("You win!"); // replace after with win screen
+            }
+
+            EndBattle();
+        }
     }
 
     /// <summary>
@@ -108,7 +132,7 @@ public class BattleManager : MonoBehaviour
             }
             
         }
-        EndBattle();
+
     }
 
     /// <summary>
@@ -116,10 +140,16 @@ public class BattleManager : MonoBehaviour
     /// </summary>
     public void EndBattle()
     {
-        StartCoroutine(UnloadSceneAfterDelay("FreeRoamWorld", 2000f)); // 5 second delay
+        
         Debug.Log("Ending battle");
-
+        if (isGameOver)
+        {
+            Debug.Log("Ending game because you died");
+            Application.Quit();
+        }
+        StartCoroutine(UnloadSceneAfterDelay("FreeRoamWorld", 0.1f));
     }
+
 
     /// <summary>
     /// 

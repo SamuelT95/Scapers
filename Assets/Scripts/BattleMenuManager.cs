@@ -209,7 +209,7 @@ public class BattleMenuManager : MonoBehaviour
         {
             case 0:
                 dialogText.text = nextMessage;
-                updateEnemeyHealth();
+                updateEnemyHealth();
                 break;
             case 1:
                 Attack attack = enemy.GetRandomAttack();
@@ -219,6 +219,7 @@ public class BattleMenuManager : MonoBehaviour
             case 2:
                 dialogText.text = nextMessage;
                 updatePlayerHealth();
+
                 break;
             case 3:
                 dialogState = 0;
@@ -234,22 +235,43 @@ public class BattleMenuManager : MonoBehaviour
     /// </summary>
     public void updatePlayerHealth()
     {
-        float percent = player.getHealth() / player.getMaxHealth();
-        GameObject healthBar = GameObject.Find("PlayerHealth");
-        healthBar.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 4 * percent);
-        setHealthBarColor(healthBar, percent);
+        if (player.getHealth() > 0)
+        {
+            float percent = player.getHealth() / player.getMaxHealth();
+            GameObject healthBar = GameObject.Find("PlayerHealth");
+            healthBar.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 4 * percent);
+            setHealthBarColor(healthBar, percent);
+        } else
+        {
+            Debug.Log("Your health is " + player.getHealth());
+            BattleManager.Instance.isBattleOver = true;
+            BattleManager.Instance.isGameOver = true;
+            BattleManager.Instance.checkBattleCondition();
+        }
+
 
     }
 
     /// <summary>
     /// changes the enemys health bar to represent their health
     /// </summary>
-    public void updateEnemeyHealth()
+    public void updateEnemyHealth()
     {
-        float percent = enemy.getHealth() / enemy.getMaxHealth();
-        GameObject healthBar = GameObject.Find("EnemyHealth");
-        healthBar.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 4*percent);
-        setHealthBarColor(healthBar, percent);
+        if (enemy.getHealth() > 0)
+        {
+            float percent = enemy.getHealth() / enemy.getMaxHealth();
+            GameObject healthBar = GameObject.Find("EnemyHealth");
+            healthBar.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 4 * percent);
+            setHealthBarColor(healthBar, percent);
+        }
+        else
+        {
+            Debug.Log("Enemy health is " + enemy.getHealth());
+            BattleManager.Instance.isBattleOver = true;
+            BattleManager.Instance.isGameOver = false;
+            BattleManager.Instance.checkBattleCondition();
+        }
+
     }
 
     /// <summary>
