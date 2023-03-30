@@ -42447,6 +42447,9 @@ MonoBehaviour:
   canvas: {fileID: 0}
   isBattleOver: 0
   isGameOver: 0
+  enemySurvived: 1
+  coolDownTime: 3
+  coolDown: 0
 --- !u!4 &1686647844
 Transform:
   m_ObjectHideFlags: 0
@@ -55561,7 +55564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Lord Farquad
-  level: 1
+  level: 10
   baseMaxHealth: 10
   baseDefense: 1
   physicalAttacks:

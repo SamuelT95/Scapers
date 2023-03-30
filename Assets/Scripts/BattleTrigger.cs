@@ -34,7 +34,7 @@ public class BattleTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && GameController.Instance.state != GameState.Battle)
+        if (other.CompareTag("Player") && GameController.Instance.state != GameState.Battle && BattleManager.Instance.coolDown == false)
         {
             Debug.Log("You collided with " + gameObject);
             Debug.Log("Calling StartBattle function");

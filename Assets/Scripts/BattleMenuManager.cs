@@ -142,6 +142,13 @@ public class BattleMenuManager : MonoBehaviour
 
     public void Run()
     {
+        dialogText.text = "You ran away!";
+        dialogState = 4;
+        BattleMenu.SetActive(false);
+        DialogMenu.SetActive(true);
+        BattleManager.Instance.isBattleOver = true;
+        BattleManager.Instance.isGameOver = false;
+        BattleManager.Instance.enemySurvived = true;
         Debug.Log("You ran");
     }
 
@@ -212,9 +219,17 @@ public class BattleMenuManager : MonoBehaviour
                 updateEnemyHealth();
                 break;
             case 1:
-                Attack attack = enemy.GetRandomAttack();
-                dialogText.text = enemy.name + " used " + attack.name;
-                useAttack(attack, enemy, player);
+                if (BattleManager.Instance.isBattleOver)
+                {
+                    dialogText.text = nextMessage;
+                    dialogState = 3;
+                }
+                else
+                {
+                    Attack attack = enemy.GetRandomAttack();
+                    dialogText.text = enemy.name + " used " + attack.name;
+                    useAttack(attack, enemy, player);
+                }
                 break;
             case 2:
                 dialogText.text = nextMessage;
@@ -222,10 +237,22 @@ public class BattleMenuManager : MonoBehaviour
 
                 break;
             case 3:
-                dialogState = 0;
-                DialogMenu.SetActive(false);
-                BattleMenu.SetActive(true);
+                if(BattleManager.Instance.isBattleOver)
+                {
+                    Debug.Log("You ran");
+                    dialogText.text = nextMessage;
+                }
+                else
+                {
+                    dialogState = 0;
+                    DialogMenu.SetActive(false);
+                    BattleMenu.SetActive(true);
+                }
                 return;
+            case 4:
+                Debug.Log("You ran");
+                BattleManager.Instance.checkBattleCondition();
+                break;
         }
         dialogState++;
     }
@@ -246,7 +273,9 @@ public class BattleMenuManager : MonoBehaviour
             Debug.Log("Your health is " + player.getHealth());
             BattleManager.Instance.isBattleOver = true;
             BattleManager.Instance.isGameOver = true;
-            BattleManager.Instance.checkBattleCondition();
+            BattleManager.Instance.enemySurvived = true;
+            nextMessage = "You were defeated by " + enemy.name;
+            //BattleManager.Instance.checkBattleCondition();
         }
 
 
@@ -269,7 +298,9 @@ public class BattleMenuManager : MonoBehaviour
             Debug.Log("Enemy health is " + enemy.getHealth());
             BattleManager.Instance.isBattleOver = true;
             BattleManager.Instance.isGameOver = false;
-            BattleManager.Instance.checkBattleCondition();
+            BattleManager.Instance.enemySurvived = false;
+            nextMessage = "You defeated " + enemy.name;
+            //BattleManager.Instance.checkBattleCondition();
         }
 
     }
