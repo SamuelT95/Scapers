@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c962736422e3a0a4f80c21b3f7dc965c, type: 3}
-  m_Name: Fire ball
+  m_Script: {fileID: 11500000, guid: f4098c677b1af2d4e8888ce6de03c567, type: 3}
+  m_Name: Pummel
   m_EditorClassIdentifier: 
-  Name: Fire ball
-  Damage: 2
-  FailureRate: 0.1
-  magicalType: 0
+  Name: Pummel
+  Damage: 1.5
+  FailureRate: 0.2
+  physicalType: 1

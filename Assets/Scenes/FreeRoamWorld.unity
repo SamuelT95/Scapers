@@ -55564,23 +55564,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Lord Farquad
-  level: 10
+  level: 2
   baseMaxHealth: 10
   baseDefense: 1
   physicalAttacks:
   - {fileID: 11400000, guid: 41a221fb81e71f5469c84725561d03df, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: d6c5e36cec008c6428d3e58360b5eb80, type: 2}
+  - {fileID: 11400000, guid: 2585407b0f91ecb43b7c5f842a771235, type: 2}
   - {fileID: 11400000, guid: 42d0c389981c5d640885a63f38b6ed19, type: 2}
   magicalAttacks:
   - {fileID: 11400000, guid: a04b5b26843a29a488bf89cb65cfb160, type: 2}
+  - {fileID: 11400000, guid: 85688e246aa9f7e4eb3fa0ae832f6b1a, type: 2}
+  - {fileID: 11400000, guid: 694e5f1eac02c884bb324dae84510390, type: 2}
   - {fileID: 11400000, guid: c4137c7563a0fdf42ba20a22e21868d4, type: 2}
-  - {fileID: 11400000, guid: a04b5b26843a29a488bf89cb65cfb160, type: 2}
-  - {fileID: 11400000, guid: c4137c7563a0fdf42ba20a22e21868d4, type: 2}
-  physicalWeakness: 0
+  physicalWeakness: 3
   magicalWeakness: 0
-  physicalResistance: 0
-  magicalResistance: 0
+  physicalResistance: 2
+  magicalResistance: 1
 --- !u!1001 &800708669474868279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55598,11 +55598,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6033307981073178103, guid: 068cd0a38426e9e4486298b3232acddb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.83
+      value: 19.57
       objectReference: {fileID: 0}
     - target: {fileID: 6033307981073178103, guid: 068cd0a38426e9e4486298b3232acddb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.35
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: 6033307981073178103, guid: 068cd0a38426e9e4486298b3232acddb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -55757,11 +55757,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4723290932818055965, guid: f19635e98446a8c4ca646aed51967c5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.95
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4723290932818055965, guid: f19635e98446a8c4ca646aed51967c5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -6.87
       objectReference: {fileID: 0}
     - target: {fileID: 4723290932818055965, guid: f19635e98446a8c4ca646aed51967c5e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -55814,11 +55814,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7134312587979411529, guid: 444cc81bffed597418cee336ea94678e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7
+      value: 29.3
       objectReference: {fileID: 0}
     - target: {fileID: 7134312587979411529, guid: 444cc81bffed597418cee336ea94678e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -5.4
       objectReference: {fileID: 0}
     - target: {fileID: 7134312587979411529, guid: 444cc81bffed597418cee336ea94678e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -56095,6 +56095,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 699802812166884084, guid: cc475aabca060ac4e9121f6df64c5665, type: 3}
+      propertyPath: level
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3446974479199892756, guid: cc475aabca060ac4e9121f6df64c5665, type: 3}
       propertyPath: m_Name
       value: PumpkinMan
@@ -56267,11 +56271,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2810607375272711136, guid: 4d398186001120f4c82fcdbb423332c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.91
+      value: -8.9
       objectReference: {fileID: 0}
     - target: {fileID: 2810607375272711136, guid: 4d398186001120f4c82fcdbb423332c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.29
+      value: 6.04
       objectReference: {fileID: 0}
     - target: {fileID: 2810607375272711136, guid: 4d398186001120f4c82fcdbb423332c8, type: 3}
       propertyPath: m_LocalPosition.z

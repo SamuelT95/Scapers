@@ -52,6 +52,9 @@ public class BattleMenuManager : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Character>();
 
+        updateEnemyHealth();
+        updatePlayerHealth();
+
         //assign functions for single buttons
         attack.onClick.AddListener(Attack);
         run.onClick.AddListener(Run);
@@ -230,7 +233,8 @@ public class BattleMenuManager : MonoBehaviour
     /// </summary>
     public void Next()
     {
-        switch(dialogState)
+        Debug.Log(dialogState);
+        switch (dialogState)
         {
             case 0:
                 dialogText.text = nextMessage;
@@ -257,22 +261,24 @@ public class BattleMenuManager : MonoBehaviour
             case 3:
                 if(BattleManager.Instance.isBattleOver)
                 {
-                    Debug.Log("You ran");
                     dialogText.text = nextMessage;
+                    Debug.Log("here");
+                    break;
                 }
                 else
                 {
                     dialogState = 0;
                     DialogMenu.SetActive(false);
                     BattleMenu.SetActive(true);
+                    return;
                 }
-                return;
+                
             case 4:
-                Debug.Log("You ran");
                 BattleManager.Instance.checkBattleCondition();
                 break;
         }
         dialogState++;
+        Debug.Log(dialogState);
     }
 
     /// <summary>

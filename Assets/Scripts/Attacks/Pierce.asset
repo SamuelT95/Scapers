@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Pierce
   m_EditorClassIdentifier: 
   Name: Pierce
-  Damage: 3
+  Damage: 3.5
   FailureRate: 0.5
-  physicalType: 0
+  physicalType: 3
