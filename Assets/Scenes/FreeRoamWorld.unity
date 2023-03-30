@@ -55577,9 +55577,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 85688e246aa9f7e4eb3fa0ae832f6b1a, type: 2}
   - {fileID: 11400000, guid: 694e5f1eac02c884bb324dae84510390, type: 2}
   - {fileID: 11400000, guid: c4137c7563a0fdf42ba20a22e21868d4, type: 2}
-  physicalWeakness: 3
-  magicalWeakness: 0
-  physicalResistance: 2
+  physicalWeakness: 4
+  magicalWeakness: 4
+  physicalResistance: 1
   magicalResistance: 1
 --- !u!1001 &800708669474868279
 PrefabInstance:
