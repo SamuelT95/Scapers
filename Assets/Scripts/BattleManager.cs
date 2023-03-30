@@ -18,7 +18,7 @@ public class BattleManager : MonoBehaviour
     public bool isBattleOver = false;
     public bool isGameOver = false;
     public bool enemySurvived = true;
-    public float coolDownTime = 3.0f;
+    public float coolDownTime = 1.50f;
     public bool coolDown = false;
 
     // Singleton pattern
@@ -74,9 +74,6 @@ public class BattleManager : MonoBehaviour
     /// <returns></returns>
     public IEnumerator StartBattle(GameObject enemy)
     {
-
-        if(coolDown == false)
-        {
 
 
             Debug.Log("Enemy:" + enemy);
@@ -141,7 +138,7 @@ public class BattleManager : MonoBehaviour
                 }
 
             }
-        }
+        
     }
 
     /// <summary>
@@ -183,6 +180,7 @@ public class BattleManager : MonoBehaviour
             GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
             SceneManager.MoveGameObjectToScene(enemy, overworldLevel);
             enemy.transform.position = enemyOverworldPosition;
+            enemy.transform.localScale = new Vector3(1, 1, 1);
         }
 
         // move player back to overworld and unhide overworld

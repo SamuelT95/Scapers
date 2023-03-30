@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,11 +27,15 @@ public class BattleMenuManager : MonoBehaviour
     Character enemy;
     TextMeshProUGUI dialogText;
 
+
+    
     /// <summary>
     /// Called once, basically an intializer
     /// </summary>
     public void Start()
     {
+        
+
         //get all buttons
         Button attack = GameObject.Find("ButtonAttack").GetComponent<Button>();
         Button run = GameObject.Find("ButtonRun").GetComponent<Button>();
@@ -142,14 +147,27 @@ public class BattleMenuManager : MonoBehaviour
 
     public void Run()
     {
-        dialogText.text = "You ran away!";
-        dialogState = 4;
+        // 1/4 chance to fail running away
+        int rand = UnityEngine.Random.Range(0, 4);
         BattleMenu.SetActive(false);
         DialogMenu.SetActive(true);
-        BattleManager.Instance.isBattleOver = true;
-        BattleManager.Instance.isGameOver = false;
-        BattleManager.Instance.enemySurvived = true;
-        Debug.Log("You ran");
+
+        if (rand == 0)
+        {
+            dialogText.text = "You failed to run away!";
+            dialogState = 1;
+        }
+        else
+        {
+            dialogText.text = "You ran away!";
+            dialogState = 4;
+
+            BattleManager.Instance.isBattleOver = true;
+            BattleManager.Instance.isGameOver = false;
+            BattleManager.Instance.enemySurvived = true;
+            Debug.Log("You ran");
+        }
+
     }
 
 
