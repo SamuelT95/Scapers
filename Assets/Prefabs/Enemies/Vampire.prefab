@@ -116,10 +116,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  physicalWeakness: 0
+  physicalWeakness: 3
   magicalWeakness: 0
-  physicalResistance: 0
-  magicalResistance: 0
+  physicalResistance: 2
+  magicalResistance: 1
 --- !u!114 &4485869064970198566
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -138,7 +138,6 @@ public class BattleManager : MonoBehaviour
                 }
 
             }
-        
     }
 
     /// <summary>

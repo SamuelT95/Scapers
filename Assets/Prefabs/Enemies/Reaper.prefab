@@ -107,17 +107,17 @@ MonoBehaviour:
   baseMaxHealth: 10
   baseDefense: 1
   physicalAttacks:
-  - {fileID: 11400000, guid: 41a221fb81e71f5469c84725561d03df, type: 2}
+  - {fileID: 11400000, guid: d6c5e36cec008c6428d3e58360b5eb80, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   magicalAttacks:
+  - {fileID: 11400000, guid: a04b5b26843a29a488bf89cb65cfb160, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  physicalWeakness: 0
-  magicalWeakness: 0
+  physicalWeakness: 3
+  magicalWeakness: 3
   physicalResistance: 0
   magicalResistance: 0
 --- !u!114 &5402867119864549425

@@ -34,7 +34,6 @@ public class BattleMenuManager : MonoBehaviour
     /// </summary>
     public void Start()
     {
-        
 
         //get all buttons
         Button attack = GameObject.Find("ButtonAttack").GetComponent<Button>();
@@ -51,9 +50,6 @@ public class BattleMenuManager : MonoBehaviour
         //initialise our player
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Character>();
-
-        updateEnemyHealth();
-        updatePlayerHealth();
 
         //assign functions for single buttons
         attack.onClick.AddListener(Attack);
@@ -109,6 +105,18 @@ public class BattleMenuManager : MonoBehaviour
         PhysicalAttackMenu.SetActive(false);
         MagicAttackMenu.SetActive(false);
         DialogMenu.SetActive(false);
+
+        Debug.Log("healthupdated");
+        StartCoroutine(resetHealthBars());
+
+    }
+
+    IEnumerator resetHealthBars()
+    {
+        yield return new WaitForEndOfFrame();
+        updateEnemyHealth();
+        updatePlayerHealth();
+        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Character>();
     }
 
     /// <summary>
@@ -211,6 +219,7 @@ public class BattleMenuManager : MonoBehaviour
     /// <param name="buttonNo">The number of the button that was pressed</param>
     public void PhysAttack(int buttonNo)
     {
+        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Character>();
         PhysicalAttackMenu.SetActive(false);
         DialogMenu.SetActive(true);
         useAttack(player.physicalAttacks[buttonNo], player, enemy);
@@ -223,6 +232,7 @@ public class BattleMenuManager : MonoBehaviour
     /// <param name="buttonNo">The number of the button that was pressed</param>
     public void MagAttack(int buttonNo)
     {
+        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Character>();
         MagicAttackMenu.SetActive(false);
         DialogMenu.SetActive(true);
         useAttack(player.magicalAttacks[buttonNo], player, enemy);
@@ -310,6 +320,7 @@ public class BattleMenuManager : MonoBehaviour
     /// </summary>
     public void updateEnemyHealth()
     {
+        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Character>();
         if (enemy.getHealth() > 0)
         {
             float percent = enemy.getHealth() / enemy.getMaxHealth();
