@@ -29571,7 +29571,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 699802812166884084, guid: cc475aabca060ac4e9121f6df64c5665, type: 3}
       propertyPath: level
-      value: 10
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 699802812166884084, guid: cc475aabca060ac4e9121f6df64c5665, type: 3}
+      propertyPath: baseDefense
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3446974479199892756, guid: cc475aabca060ac4e9121f6df64c5665, type: 3}
       propertyPath: m_Name
@@ -55507,11 +55511,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7134312587979411529, guid: 444cc81bffed597418cee336ea94678e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.8499603
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: 7134312587979411529, guid: 444cc81bffed597418cee336ea94678e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.000081
+      value: -6.57
       objectReference: {fileID: 0}
     - target: {fileID: 7134312587979411529, guid: 444cc81bffed597418cee336ea94678e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -55757,7 +55761,6 @@ MonoBehaviour:
   magicalWeakness: 4
   physicalResistance: 1
   magicalResistance: 1
-  defense: 0
 --- !u!1001 &1369703743665660517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56149,6 +56152,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 9076402795251320650, guid: 9013c3b7295d0c94ba68aa9b8472e81b, type: 3}
+      propertyPath: m_TagString
+      value: quest_npc
+      objectReference: {fileID: 0}
     - target: {fileID: 9076402795251320663, guid: 9013c3b7295d0c94ba68aa9b8472e81b, type: 3}
       propertyPath: dialog.lines.Array.size
       value: 4
@@ -56186,10 +56193,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   physicalWeakness: 0
-  magicalWeakness: 0
+  magicalWeakness: 2
   physicalResistance: 0
   magicalResistance: 0
-  defense: 0
 --- !u!114 &9134991212788735992
 MonoBehaviour:
   m_ObjectHideFlags: 0

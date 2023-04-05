@@ -174,6 +174,8 @@ public class BattleManager : MonoBehaviour
         // return player to normal size
         player.transform.localScale = new Vector3(1, 1, 1);
 
+
+
         if(enemySurvived)
         {
             GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
@@ -181,6 +183,7 @@ public class BattleManager : MonoBehaviour
             enemy.transform.position = enemyOverworldPosition;
             enemy.transform.localScale = new Vector3(1, 1, 1);
         }
+
 
         // move player back to overworld and unhide overworld
         SceneManager.MoveGameObjectToScene(player, overworldLevel);
@@ -193,6 +196,7 @@ public class BattleManager : MonoBehaviour
             obj.SetActive(true);
         }
 
+
         //return player to overworld position
         player.transform.position = overworldPosition;
 
@@ -202,5 +206,16 @@ public class BattleManager : MonoBehaviour
         yield return new WaitForSeconds(coolDownTime);
 
         coolDown = false;
+        if (GameObject.Find("Ghost") == null)
+        {
+            GameObject npc = GameObject.FindGameObjectWithTag("quest_npc");
+            List<string> newMessages = new List<string>();
+            newMessages.Add("You did it! you deafeated the Ghost!");
+            newMessages.Add("I can never repay you enough");
+            newMessages.Add("I shall heal you as thanks");
+
+            npc.GetComponent<NPCController>().dialog.Lines = newMessages;
+        }
+
     }
     }

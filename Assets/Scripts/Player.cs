@@ -15,7 +15,7 @@ public class Player : Character
     /// <param name="exp"></param>
     public int AddExp(int levelOfDefeated)
     {
-        int expGained = (int)Mathf.Pow(levelOfDefeated, 3);
+        int expGained = (int)Mathf.Pow(levelOfDefeated, 3) + 1;
         this.exp += expGained;
 
         //check if we gained a level

@@ -129,10 +129,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   physicalWeakness: 0
-  magicalWeakness: 0
+  magicalWeakness: 2
   physicalResistance: 0
   magicalResistance: 0
-  defense: 0
 --- !u!114 &4748596450251917622
 MonoBehaviour:
   m_ObjectHideFlags: 0

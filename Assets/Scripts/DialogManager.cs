@@ -67,6 +67,10 @@ public class DialogManager : MonoBehaviour
                 }
                 else
                 { // Once there is no more dialog boxes, hide the dialog box from the screen
+                    if (dialog.Lines[dialog.Lines.Count - 1] == "I shall heal you as thanks")
+                    {
+                        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().Heal(1000.0f);
+                    }
                     dialogBox.SetActive(false);
                     currentLine = 0;
                     OnHideDialog?.Invoke(); // enables FreeRoam by changing gamestate

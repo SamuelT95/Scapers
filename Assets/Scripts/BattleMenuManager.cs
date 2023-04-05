@@ -299,6 +299,7 @@ public class BattleMenuManager : MonoBehaviour
                 else
                 {
                     dialogText.text = player.name + " was defeated by " + enemy.name + "!" + "\n You blacked out";
+                    player.setHealth(1.0f);
                     dialogState = dialogMenuState.BATTLE_OVER;
                 }
                 break;
@@ -325,7 +326,6 @@ public class BattleMenuManager : MonoBehaviour
                 break;
 
             case dialogMenuState.BATTLE_OVER:
-                player.Heal(1.0f);
                 BattleManager.Instance.checkBattleCondition();
                 break;
 

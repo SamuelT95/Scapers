@@ -11,7 +11,7 @@ public class HealByDamage : Physical
         string message = base.doAttack(caster, reciever);
 
         float damage = caster.getModifiedHealth(Damage);
-        caster.Heal(damage - reciever.defense);
+        caster.Heal(damage - reciever.getDefense());
 
         return message + "\n" + caster.Name + " was healed for " + damage.ToString();
     }

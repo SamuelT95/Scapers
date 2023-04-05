@@ -17,6 +17,7 @@ TagManager:
   - magical_buttons
   - back_buttons
   - Enemy
+  - quest_npc
   layers:
   - Default
   - TransparentFX
