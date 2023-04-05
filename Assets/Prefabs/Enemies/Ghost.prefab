@@ -114,8 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002a3b9559a8ed74d9345eee06635933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   level: 1
-  baseMaxHealth: 100
+  baseMaxHealth: 7
   baseDefense: 2
   physicalAttacks:
   - {fileID: 0}
@@ -131,6 +132,7 @@ MonoBehaviour:
   magicalWeakness: 0
   physicalResistance: 0
   magicalResistance: 0
+  defense: 0
 --- !u!114 &4748596450251917622
 MonoBehaviour:
   m_ObjectHideFlags: 0

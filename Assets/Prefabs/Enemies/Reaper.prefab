@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Reaper
   level: 1
-  baseMaxHealth: 10
+  baseMaxHealth: 12
   baseDefense: 1
   physicalAttacks:
   - {fileID: 11400000, guid: d6c5e36cec008c6428d3e58360b5eb80, type: 2}
@@ -120,6 +120,7 @@ MonoBehaviour:
   magicalWeakness: 3
   physicalResistance: 0
   magicalResistance: 0
+  defense: 0
 --- !u!114 &5402867119864549425
 MonoBehaviour:
   m_ObjectHideFlags: 0

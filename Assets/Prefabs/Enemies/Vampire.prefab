@@ -104,15 +104,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Vampire
   level: 1
-  baseMaxHealth: 10
-  baseDefense: 1
+  baseMaxHealth: 11
+  baseDefense: 0.75
   physicalAttacks:
-  - {fileID: 11400000, guid: 41a221fb81e71f5469c84725561d03df, type: 2}
+  - {fileID: 11400000, guid: 5beb8a197fe5a9f49aa82bebedcb4fb0, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   magicalAttacks:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 694e5f1eac02c884bb324dae84510390, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -120,6 +120,7 @@ MonoBehaviour:
   magicalWeakness: 0
   physicalResistance: 2
   magicalResistance: 1
+  defense: 0
 --- !u!114 &4485869064970198566
 MonoBehaviour:
   m_ObjectHideFlags: 0

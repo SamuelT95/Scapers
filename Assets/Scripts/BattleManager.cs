@@ -120,7 +120,7 @@ public class BattleManager : MonoBehaviour
 
             GameObject enemyLevel = GameObject.Find("EnemyLevel");
             enemyLevel.transform.GetComponent<TMP_Text>().text = enemy.GetComponent<Character>().level.ToString();
-            enemy.transform.localScale = new Vector3(3, 3, 3);
+            enemy.transform.localScale = new Vector3(2, 2, 2);
 
             // move player and enemy to battle scene, then hide overworld
             Scene battle = SceneManager.GetSceneByName("BattleScene");

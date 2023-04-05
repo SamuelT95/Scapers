@@ -11,7 +11,18 @@ using UnityEngine.UI;
 /// </summary>
 public class BattleMenuManager : MonoBehaviour
 {
-    
+    private enum dialogMenuState
+    {
+        PLAYER_USED,
+        PLAYER_DAMAGE,
+        ENEMY_USED,
+        ENEMY_DAMAGE,
+        EXP,
+        RUN,
+        BATTLE_RESULT,
+        END,
+        BATTLE_OVER
+    }
     //GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");*/
 
     private GameObject BattleMenu;
@@ -21,7 +32,7 @@ public class BattleMenuManager : MonoBehaviour
     private GameObject DialogMenu;
 
     private string nextMessage;
-    private int dialogState = 0;
+    private dialogMenuState dialogState = dialogMenuState.PLAYER_USED;
 
     Player player;
     Character enemy;
@@ -152,33 +163,23 @@ public class BattleMenuManager : MonoBehaviour
     }
 
     public void Heal()
-    {
-        Debug.Log("You healed");
+    { 
+        Heal heal = ScriptableObject.CreateInstance<Heal>();
+        heal.Damage = 3;
+        heal.Name = "Healing Power";
+        heal.FailureRate = 0.1f;
+
+        BattleMenu.SetActive(false);
+        DialogMenu.SetActive(true);
+        useAttack(heal, player, player);
     }
 
     public void Run()
     {
-        // 1/4 chance to fail running away
-        int rand = UnityEngine.Random.Range(0, 4);
         BattleMenu.SetActive(false);
         DialogMenu.SetActive(true);
-
-        if (rand == 0)
-        {
-            dialogText.text = "You failed to run away!";
-            dialogState = 1;
-        }
-        else
-        {
-            dialogText.text = "You ran away!";
-            dialogState = 4;
-
-            BattleManager.Instance.isBattleOver = true;
-            BattleManager.Instance.isGameOver = false;
-            BattleManager.Instance.enemySurvived = true;
-            Debug.Log("You ran");
-        }
-
+        dialogState = dialogMenuState.RUN;
+        Next();
     }
 
 
@@ -211,6 +212,8 @@ public class BattleMenuManager : MonoBehaviour
     {
         dialogText.text = caster.Name + " used " + attack.name;
         nextMessage = attack.tryAttack(caster, reciever);
+        dialogState = dialogMenuState.PLAYER_USED;
+        Next();
     }
 
     /// <summary>
@@ -246,49 +249,106 @@ public class BattleMenuManager : MonoBehaviour
         Debug.Log(dialogState);
         switch (dialogState)
         {
-            case 0:
+            case dialogMenuState.PLAYER_USED:
+                dialogState = dialogMenuState.PLAYER_DAMAGE;
+                break;
+            case dialogMenuState.PLAYER_DAMAGE:
                 dialogText.text = nextMessage;
                 updateEnemyHealth();
-                break;
-            case 1:
-                if (BattleManager.Instance.isBattleOver)
-                {
-                    dialogText.text = nextMessage;
-                    dialogState = 3;
-                }
-                else
-                {
-                    Attack attack = enemy.GetRandomAttack();
-                    dialogText.text = enemy.name + " used " + attack.name;
-                    useAttack(attack, enemy, player);
-                }
-                break;
-            case 2:
-                dialogText.text = nextMessage;
                 updatePlayerHealth();
-
-                break;
-            case 3:
-                if(BattleManager.Instance.isBattleOver)
+                if (enemy.getHealth() <= 0)
                 {
-                    dialogText.text = nextMessage;
-                    Debug.Log("here");
-                    break;
+                    BattleManager.Instance.isBattleOver = true;
+                    BattleManager.Instance.isGameOver = false;
+                    BattleManager.Instance.enemySurvived = false;
+                    dialogState = dialogMenuState.BATTLE_RESULT;
                 }
                 else
                 {
-                    dialogState = 0;
-                    DialogMenu.SetActive(false);
-                    BattleMenu.SetActive(true);
-                    return;
+                    dialogState = dialogMenuState.ENEMY_USED;
                 }
-                
-            case 4:
+                break;
+            case dialogMenuState.ENEMY_USED:
+                Attack attack = enemy.GetRandomAttack();
+                dialogText.text = enemy.name + " used " + attack.name;
+                useAttack(attack, enemy, player);
+                dialogState = dialogMenuState.ENEMY_DAMAGE;
+                break;
+            case dialogMenuState.ENEMY_DAMAGE:
+                dialogText.text = nextMessage;
+                updateEnemyHealth();
+                updatePlayerHealth();
+                if (player.getHealth() <= 0)
+                {
+                    BattleManager.Instance.isBattleOver = true;
+                    BattleManager.Instance.isGameOver = true;
+                    BattleManager.Instance.enemySurvived = true;
+                    dialogState = dialogMenuState.BATTLE_RESULT;
+                }
+                else
+                {
+                    dialogState = dialogMenuState.END;
+                }
+                break;
+            case dialogMenuState.BATTLE_RESULT:
+                if (BattleManager.Instance.enemySurvived == false)
+                {
+                    dialogText.text = player.name + " defeated " + enemy.name + "!";
+                    dialogState = dialogMenuState.EXP;
+                }
+                else
+                {
+                    dialogText.text = player.name + " was defeated by " + enemy.name + "!" + "\n You blacked out";
+                    dialogState = dialogMenuState.BATTLE_OVER;
+                }
+                break;
+            case dialogMenuState.EXP:
+                int level = player.level;
+                int expGained = player.AddExp(enemy.level);
+
+                string message = player.name + "gained " + expGained.ToString() + " exp";
+
+                if (level < player.level)
+                {
+                    message += "\n You leveled up! You are now level: " + player.level.ToString();
+                    
+                }
+
+                dialogText.text = message;
+                dialogState = dialogMenuState.BATTLE_OVER;
+                break;
+
+            case dialogMenuState.END:
+                //end dialog
+                DialogMenu.SetActive(false);
+                BattleMenu.SetActive(true);
+                break;
+
+            case dialogMenuState.BATTLE_OVER:
+                player.Heal(1.0f);
                 BattleManager.Instance.checkBattleCondition();
                 break;
+
+            case dialogMenuState.RUN:
+                int rand = UnityEngine.Random.Range(0, 4);
+                if (rand == 0)
+                {
+                    dialogText.text = "You failed to run away!";
+                    dialogState = dialogMenuState.ENEMY_USED;
+                }
+                else
+                {
+                    dialogText.text = "You ran away!";
+                    dialogState = dialogMenuState.BATTLE_OVER;
+
+                    BattleManager.Instance.isBattleOver = true;
+                    BattleManager.Instance.isGameOver = false;
+                    BattleManager.Instance.enemySurvived = true;
+                    Debug.Log("You ran");
+                }
+                break;
+            
         }
-        dialogState++;
-        Debug.Log(dialogState);
     }
 
     /// <summary>
@@ -296,18 +356,17 @@ public class BattleMenuManager : MonoBehaviour
     /// </summary>
     public void updatePlayerHealth()
     {
+        GameObject healthBar = GameObject.Find("PlayerHealth");
         if (player.getHealth() > 0)
         {
             float percent = player.getHealth() / player.getMaxHealth();
-            GameObject healthBar = GameObject.Find("PlayerHealth");
             healthBar.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 4 * percent);
             setHealthBarColor(healthBar, percent);
         } else
         {
+            healthBar.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 0);
             Debug.Log("Your health is " + player.getHealth());
-            BattleManager.Instance.isBattleOver = true;
-            BattleManager.Instance.isGameOver = true;
-            BattleManager.Instance.enemySurvived = true;
+
             nextMessage = "You were defeated by " + enemy.name;
             //BattleManager.Instance.checkBattleCondition();
         }
@@ -321,21 +380,17 @@ public class BattleMenuManager : MonoBehaviour
     public void updateEnemyHealth()
     {
         enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Character>();
+        GameObject healthBar = GameObject.Find("EnemyHealth");
         if (enemy.getHealth() > 0)
         {
             float percent = enemy.getHealth() / enemy.getMaxHealth();
-            GameObject healthBar = GameObject.Find("EnemyHealth");
+            
             healthBar.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 4 * percent);
             setHealthBarColor(healthBar, percent);
         }
         else
         {
-            Debug.Log("Enemy health is " + enemy.getHealth());
-            BattleManager.Instance.isBattleOver = true;
-            BattleManager.Instance.isGameOver = false;
-            BattleManager.Instance.enemySurvived = false;
-            nextMessage = "You defeated " + enemy.name;
-            //BattleManager.Instance.checkBattleCondition();
+            healthBar.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 0);
         }
 
     }

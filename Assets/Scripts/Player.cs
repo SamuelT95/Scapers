@@ -13,15 +13,18 @@ public class Player : Character
     /// adds exp to the player and updates his level
     /// </summary>
     /// <param name="exp"></param>
-    public void addExp(int exp)
+    public int AddExp(int levelOfDefeated)
     {
-        this.exp += exp;
+        int expGained = (int)Mathf.Pow(levelOfDefeated, 3);
+        this.exp += expGained;
 
         //check if we gained a level
-        if(exp > Mathf.Pow(level, 2) /2)
+        if(this.exp > Mathf.Pow(level, 3))
         {
             level = (int)Mathf.Sqrt(exp * 2);
             levelUp();
         }
+
+        return expGained;
     }
 }

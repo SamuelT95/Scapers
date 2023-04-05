@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Pumpkin Man
   level: 1
-  baseMaxHealth: 10
+  baseMaxHealth: 15
   baseDefense: 1
   physicalAttacks:
   - {fileID: 11400000, guid: 41a221fb81e71f5469c84725561d03df, type: 2}
@@ -120,6 +120,7 @@ MonoBehaviour:
   magicalWeakness: 1
   physicalResistance: 3
   magicalResistance: 2
+  defense: 0
 --- !u!114 &3933427699976288464
 MonoBehaviour:
   m_ObjectHideFlags: 0

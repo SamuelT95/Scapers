@@ -26,7 +26,7 @@ public class Character : MonoBehaviour
     private float damageModifier = 0.1f;
     private float defenseModifier = 0.1f;
 
-    private float defense;
+    public float defense;
     private float health;
     private float maxHealth;
 
@@ -87,6 +87,11 @@ public class Character : MonoBehaviour
     public float getHealth()
     {
         return health;
+    }
+
+    public void setHealth(float amt)
+    {
+        health = amt;
     }
 
     /// <summary>
@@ -153,6 +158,11 @@ public class Character : MonoBehaviour
 
     public bool Heal(float amount)
     {
+        if(amount< 0)
+        {
+            return false;
+        }
+
         health += amount;
 
         if (health > maxHealth)

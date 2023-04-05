@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Skeleton Pirate
   level: 1
-  baseMaxHealth: 10
+  baseMaxHealth: 8
   baseDefense: 1
   physicalAttacks:
   - {fileID: 11400000, guid: 42d0c389981c5d640885a63f38b6ed19, type: 2}
@@ -120,6 +120,7 @@ MonoBehaviour:
   magicalWeakness: 4
   physicalResistance: 3
   magicalResistance: 4
+  defense: 0
 --- !u!114 &6398712051694231259
 MonoBehaviour:
   m_ObjectHideFlags: 0
