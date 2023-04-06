@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1752671102913246728}
   - component: {fileID: 3286295542212092186}
   - component: {fileID: 1187773309661469708}
+  - component: {fileID: 7839198422778281278}
   m_Layer: 0
   m_Name: Reaper
   m_TagString: Enemy
@@ -120,7 +121,6 @@ MonoBehaviour:
   magicalWeakness: 3
   physicalResistance: 0
   magicalResistance: 0
-  defense: 0
 --- !u!114 &5402867119864549425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,3 +204,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &7839198422778281278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6033307981073178101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f07525e002c02cf4f99d4f9f64e85ccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenshotCamera: {fileID: 0}
+  ignoreTag: Ghost

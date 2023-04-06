@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7847918405320456223}
   - component: {fileID: 6422292785358712589}
   - component: {fileID: 7259807721377206811}
+  - component: {fileID: -4305541998840752852}
   m_Layer: 0
   m_Name: Vampire
   m_TagString: Enemy
@@ -120,7 +121,6 @@ MonoBehaviour:
   magicalWeakness: 0
   physicalResistance: 2
   magicalResistance: 1
-  defense: 0
 --- !u!114 &4485869064970198566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,3 +204,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &-4305541998840752852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810607375272711138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f07525e002c02cf4f99d4f9f64e85ccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenshotCamera: {fileID: 0}
+  ignoreTag: Ghost

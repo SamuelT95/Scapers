@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1391064040601825039}
   - component: {fileID: 2776456151059413021}
   - component: {fileID: -7248717585706416885}
+  - component: {fileID: -8019529051597988059}
   m_Layer: 0
   m_Name: Ghost 1
   m_TagString: Enemy
@@ -102,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002a3b9559a8ed74d9345eee06635933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   level: 1
   baseMaxHealth: 100
   baseDefense: 2
@@ -202,3 +204,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &-8019529051597988059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6387843623689192690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f07525e002c02cf4f99d4f9f64e85ccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenshotCamera: {fileID: 0}
+  ignoreTag: Ghost

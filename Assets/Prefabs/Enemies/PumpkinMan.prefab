@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7223278709607948009}
   - component: {fileID: 5906405767018105339}
   - component: {fileID: 7788783321573586157}
+  - component: {fileID: 2430923890468290373}
   m_Layer: 0
   m_Name: PumpkinMan
   m_TagString: Enemy
@@ -120,7 +121,6 @@ MonoBehaviour:
   magicalWeakness: 1
   physicalResistance: 3
   magicalResistance: 2
-  defense: 0
 --- !u!114 &3933427699976288464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,3 +204,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &2430923890468290373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3446974479199892756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f07525e002c02cf4f99d4f9f64e85ccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenshotCamera: {fileID: 0}
+  ignoreTag: Ghost
