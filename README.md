@@ -1,5 +1,4 @@
 # Run Escape
-_by Scapers_
 BCIT COMP 3951 Technical Programming Course Project
 ### Description
 A game where the player traverses an overworld full of NPC’s (non-playable characters), some friendly and some not. When encountering an enemy, you and the enemy are transported to a “Battle scene” where they engage in turn-based combat. If the player is victorious they will gain experience points.
